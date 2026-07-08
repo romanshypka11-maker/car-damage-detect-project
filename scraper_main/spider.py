@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
-from config_brands import BRANDS_TO_SCRAPE
+from scraper_main.scraper import BRANDS_TO_SCRAPE
 
 
 class SpiderConfig:
@@ -21,7 +21,9 @@ class URLBuilder:
         query_parts = [
             "search_type=1",
             "category=1",
-            f"all[0].any[0].brand={config.MARK_ID}",
+            "all[0].any[0].fuel[0]=6",
+            "abroad=0",
+            "customs_cleared=1",
             f"page={page}",
             "limit=100"
         ]
@@ -50,7 +52,7 @@ class Spider:
 
     def _load_existing_links(self):
         try:
-            with open("all_links.txt", "r", encoding="utf-8") as f:
+            with open("links.txt", "r", encoding="utf-8") as f:
                 return set(line.strip() for line in f if line.strip())
         except FileNotFoundError:
             return set()
@@ -176,7 +178,7 @@ class Spider:
 
     def _write_to_file(self, new_links):
          #Записуємо в загальну базу (Master Log) для уникнення дублів
-        with open("links.txt", "a", encoding="utf-8") as f:
+        with open("electro_links.txt", "a", encoding="utf-8") as f:
             for link in new_links:
                 f.write(link + "\n")
 

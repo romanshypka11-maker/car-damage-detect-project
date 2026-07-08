@@ -11,7 +11,7 @@ DB_CONFIG = {
     "password": os.getenv("DB_PASSWORD"),
     "host": os.getenv("DB_HOST"),
     "port": os.getenv("DB_PORT"),
-    "table": os.getenv("DB_TABLE"),
+    "table": os.getenv("DB_TABLE", "car_listings"),
 }
 
 MAX_CONCURRENT_REQUESTS = 10
@@ -89,7 +89,7 @@ def parse_car_html(html, url):
             mileage = int(only_digits) * 1000 if 'тис.' in raw_text_mileage else int(only_digits)
 
     # 5. КОРОБКА ПЕРЕДАЧ
-    transmission_element = soup.find('div', id='basicInfoTableMainInfo1')
+    transmission_element = soup.find('div', id='descTransmissionTransmission')
     transmission_text = transmission_element.get_text(strip=True) if transmission_element else None
 
     # 6. ПАЛЬНЕ ТА ОБ'ЄМ
@@ -138,12 +138,18 @@ def parse_car_html(html, url):
             accident_details = " ".join(filter(None, details_parts))
 
     # 11. ВЛАСНИКИ
-    owners_count_div = soup.find('div', id='mvsOptions5')
+    target_spans = soup.select('div[id^="mvsOptions"] span.common-text')
+
     owners_count = None
-    if owners_count_div:
-        match = re.search(r'(\d+)', owners_count_div.get_text(strip=True))
-        if match:
-            owners_count = int(match.group(1))
+
+    for span in target_spans:
+        text = span.get_text(strip=True).lower()
+        # Перевіряємо, чи є в цьому конкретному span слово 'власник' (або 'власники')
+        if 'власник' in text:
+            match = re.search(r'(\d+)', text)
+            if match:
+                owners_count = int(match.group(1))
+                break  # Знайшли потрібне - зупиняємо цикл
 
     # 12. ЦІНА
     price_div = soup.find('div', id='sidePrice')
@@ -201,6 +207,15 @@ def parse_car_html(html, url):
         seller_type = None
         if seller_segment:
             seller_type = seller_segment.get_text(strip=True)
+    ev_range_element = soup.find('div', id='basicInfoTableMainInfo1')
+    ev_range = None
+
+    if ev_range_element:
+        raw_range_text = ev_range_element.get_text(strip=True)
+        only_digits = ''.join(filter(str.isdigit, raw_range_text))
+        if only_digits:
+            ev_range = int(only_digits)
+
 
     return {
         "url": url.split('?')[0],
@@ -233,5 +248,6 @@ def parse_car_html(html, url):
         "doors_count": doors_count,
         "seats_count": seats_count,
         "modification": modification,
-        "seller_type": seller_type
+        "seller_type": seller_type,
+        "ev_range_km": ev_range
     }

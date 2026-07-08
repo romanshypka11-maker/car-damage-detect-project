@@ -1,0 +1,49 @@
+# --- Python Virtual Environments ---
+# Ігноруємо локальне віртуальне середовище, бо в Docker створюється своє власне
+.venv/
+venv/
+ENV/
+env/
+
+# --- Heavy Data & ML Models (Mounted via Volumes instead) ---
+# Ці папки ми підключаємо через volumes у docker-compose, в сам образ їх зашивати не можна!
+# --- Heavy Data & ML Models (Mounted via Volumes instead) ---
+data/
+models_ML/
+auctions/output
+auctions/data
+auctions/vision_model
+catboost_info/
+data_analytics/
+
+# Ігноруємо абсолютно всі Jupyter-ноутбуки в проєкті
+*.ipynb
+
+# Ігноруємо всі текстові файли та картинки
+*.jpg
+*.jpeg
+*.png
+
+# --- IDE & System Garbage ---
+# Локальні налаштування PyCharm, VS Code та кеш системи
+.idea/
+.vscode/
+.git/
+.gitignore
+.dockerignore
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+Thumbs.db
+.DS_Store
+
+# --- Python Cache ---
+# Тимчасові файли компіляції Python, які створюються під Windows і заважатимуть в Linux
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/

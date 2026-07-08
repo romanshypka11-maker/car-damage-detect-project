@@ -4,7 +4,7 @@ import asyncpg
 import aiohttp
 from spider import Spider, SpiderConfig
 import random
-from scraper import parse_car_html, DB_CONFIG, MAX_CONCURRENT_REQUESTS
+from scraper_main.scraper import parse_car_html, DB_CONFIG, MAX_CONCURRENT_REQUESTS
 import time
 
 async def save_to_db(pool, car_data):
@@ -15,7 +15,7 @@ async def save_to_db(pool, car_data):
     keys = car_data.keys()
     columns = ", ".join(car_data.keys())
     placeholders = ", ".join([f"${i+1}" for i in range(len(car_data))])
-    table_name = DB_CONFIG.get("table","car_listings")
+    table_name = DB_CONFIG.get("table") or "car_listings"
 
     query = f"""
     INSERT INTO {table_name} ({columns})
@@ -53,7 +53,7 @@ async def run_scraper_stage():
         return
     START_LINE = 0
 
-    with open("links/links.txt", "r", encoding="utf-8") as f:
+    with open("electro_clean.txt", "r", encoding="utf-8") as f:
         all_urls = [line.strip() for line in f if line.strip()]
         urls = all_urls[START_LINE:]
 

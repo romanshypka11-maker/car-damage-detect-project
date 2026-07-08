@@ -1,0 +1,16 @@
+.env
+__pycache__/
+scraper_main/links
+scraper_main/old
+.ipynb_checkpoints
+data/
+catboost_info/
+data_analytics/
+auctions/data/
+auctions/output/
+auctions/vision_model/
+
+*.jpg
+*.jpeg
+*.pnggit rm -r --cached .
+models_ML/
