@@ -25,7 +25,7 @@ class DeepAutoScraper:
         print(f"🔍 Шукаємо VIN {vin} через Google Proxy для сайту PLC.ua...")
 
         # Запит до Google (шукаємо суто на домені plc.ua)
-        google_search_url = f"https://www.google.com/search?q={vin}+site:plc.ua"
+        google_search_url = f"https://www.google.com/search?q={vin}"
 
         payload = {
             "cmd": "request.get",

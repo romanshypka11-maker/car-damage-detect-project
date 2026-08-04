@@ -146,7 +146,7 @@ async def generate_sql_via_qwen(user_text: str) -> str:
     request_url = f"{OLLAMA_BASE_URL.rstrip('/')}/api/generate"
 
     try:
-        async with httpx.AsyncClient(timeout=120.0) as client:
+        async with httpx.AsyncClient(timeout=200.0) as client:
             response = await client.post(
                 request_url,
                 json={

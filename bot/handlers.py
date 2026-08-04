@@ -224,7 +224,7 @@ async def handle_auto_link(message: Message):
 
             ai_verdict = "Не вдалося сформувати висновок."
             try:
-                async with httpx.AsyncClient() as client:
+                async with httpx.AsyncClient(timeout=httpx.Timeout(120.0, connect=10.0)) as client:
                     verdict_res = await client.post(
                         f"{AI_SERVICE_URL}/api/ai/verdict",
                         json={
@@ -232,7 +232,6 @@ async def handle_auto_link(message: Message):
                             "cv_reports": final_reports,  # тут буде порожній список, якщо фото не знайшли
                             "predicted_price": float(predictor_price)
                         },
-                        timeout=50
                     )
                     if verdict_res.status_code == 200:
                         ai_verdict = verdict_res.json().get("verdict", ai_verdict)
@@ -240,9 +239,12 @@ async def handle_auto_link(message: Message):
                                                     parse_mode="Markdown")
                     else:
                         await verdict_msg.edit_text("❌ Сервер ШІ повернув помилку при формуванні вердикту.")
+            except httpx.ReadTimeout:
+                print("⚠️ Запит до AI_SERVICE перевищив ліміт у 120 секунд.")
+                await verdict_msg.edit_text( "⏳ Генерація аналізу затягнулася. Спробуйте ще раз за декілька секунд.")
             except Exception as verdict_err:
                 print(f"Помилка отримання вердикту: {verdict_err}")
-                await verdict_msg.edit_text("❌ Не вдалося побудувати фінальний висновок ШІ через таймаут.")
+                await verdict_msg.edit_text("❌ Не вдалося побудувати фінальний висновок ШІ.")
 
             # We cache the results (even if there are 0 photos, the verdict will still be cached!)
             PHOTO_CACHE[vin] = {
