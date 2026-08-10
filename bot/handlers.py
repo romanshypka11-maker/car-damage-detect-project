@@ -1,32 +1,19 @@
 import asyncio
-import json
 import base64
 import httpx
 from aiogram import Router, F
 from aiogram.types import Message, InputMediaPhoto, BufferedInputFile
 import os
-from pathlib import Path
 import logging
 from aiogram.filters import CommandStart
-from bot.scraper_bot import AutoRiaParser
-from auctions.parsers.parser_for_auction_pictures import get_photos_by_vin
+from ai_agent import ask
+from core.config import get_settings
+from scraping.plc_ua import get_photos_by_vin
+from scraping.autoria import AutoRiaParser
 
+logger = logging.getLogger(__name__)
 router = Router()
 PHOTO_CACHE = {}
-
-AI_SERVICE_URL = os.getenv("AI_SERVICE_URL", "http://api_server:8000")
-
-# 1. Get the base directory of the project relative to this file
-# (Going up 2 levels assuming handlers.py is inside 'bot' folder)
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# 2. Define the path to the JSON file independently
-FEATURE_COLUMNS_PATH = BASE_DIR / "feature_columns3.json"
-
-# 3. Load feature columns during module initialization
-with open(FEATURE_COLUMNS_PATH, "r", encoding="utf-8") as f:
-    saved_columns = json.load(f)
-
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
@@ -52,7 +39,6 @@ async def cmd_start(message: Message):
 @router.message(F.text.contains("auto.ria.com"))
 async def handle_auto_link(message: Message):
     url = message.text
-
     # Creating a parser object
     parser = AutoRiaParser()
     data = await parser.get_data(url)
@@ -112,7 +98,7 @@ async def handle_auto_link(message: Message):
         # --- QUESTION 1: Estimating the price of CatBoost using FastAPI ---
         async with httpx.AsyncClient() as client:
             price_res = await client.post(
-                f"{AI_SERVICE_URL}/predict-price",
+                f"{settings.ai_service_url}/predict-price",
                 json={"features": input_dict},
                 timeout=10
             )
@@ -178,11 +164,11 @@ async def handle_auto_link(message: Message):
                 # --- QUESTION 2: Cascading CV analysis of photos using FastAPI ---
                 async with httpx.AsyncClient() as client:
                     cv_res = await client.post(
-                        f"{AI_SERVICE_URL}/analyze-damage",
+                        f"{settings.ai_service_url}/analyze-damage",
                         json={"urls": auction_photos},
-                        timeout=60
+                        timeout=60.0,
                     )
-                    cv_data = cv_res.json()
+                    cv_data = cv_res.json() if cv_res.status_code == 200 else {}
 
                 processed_b64_images = cv_data.get("images", [])
                 final_reports = cv_data.get("reports", [])
@@ -226,7 +212,7 @@ async def handle_auto_link(message: Message):
             try:
                 async with httpx.AsyncClient(timeout=httpx.Timeout(120.0, connect=10.0)) as client:
                     verdict_res = await client.post(
-                        f"{AI_SERVICE_URL}/api/ai/verdict",
+                        f"{settings.ai_service_url}/api/ai/verdict",
                         json={
                             "car_data": data,
                             "cv_reports": final_reports,  # тут буде порожній список, якщо фото не знайшли
@@ -260,99 +246,36 @@ async def handle_auto_link(message: Message):
         await message.answer(f"❌ Помилка при відображенні даних: {e}")
 
 
-# New handler
 @router.message()
 async def handle_ai_text_query(message: Message):
-    # If the message contains a reference to an authoria, we stop processing it (the first handler will handle it)
     if not message.text or "auto.ria.com" in message.text:
         return
 
-    status_msg = await message.answer("🤖 Опрацьовую ваш запит за допомогою Deep Auto ⏳")
+    status_msg = await message.answer("🤖 Опрацьовую запит... ⏳")
 
     try:
-        # # Making an asynchronous HTTP request to our new endpoint on FastAPI
-        async with httpx.AsyncClient() as client:
-            response = await client.post(
-                f"{AI_SERVICE_URL}/api/ai/ask",
-                json={"text": message.text},
-                timeout=35  # даємо трохи більше часу на складні запити
-            )
-            data = response.json()
+        # Виклик LangGraph-агента напряму через ai_agent
+        data = await ask(message.text)
 
         if data.get("status") == "success" and data.get("result"):
             cars = data["result"]
             first_row = cars[0]
 
-            columns_count = len(first_row.keys())
-
-            #  ANALYTICS (if the result is only 1 or 2 columns and it is not a list of cars)
-            if columns_count <= 2 and not any(k in first_row for k in ["make", "model", "url"]):
-
-                # We retrieve the name of the first column dynamically
-                first_column_name = list(first_row.keys())[0]
-                agg_val = first_row[first_column_name]
-                count_val = first_row.get("cars_found") or first_row.get("count") or "всієї інформації у базі даних "
+            # Аналітична відповідь (агреговані дані)
+            if len(first_row.keys()) <= 2 and not any(k in first_row for k in ["make", "model"]):
+                col_name = list(first_row.keys())[0]
+                agg_val = first_row[col_name]
 
                 if agg_val is not None:
                     formatted_val = f"{round(float(agg_val)):,}".replace(",", " ")
-
-                    unit = "$"
-                    action_text = "Результат аналітики"
-
-                    # Extract the SQL query from the FastAPI response to understand the context
-                    sql_query = data.get("sql_used", "").upper()
-                    msg_upper = message.text.upper()
-
-                    if "MIN(" in sql_query:
-                        action_text = "Мінімальне значення"
-                    elif "MAX(" in sql_query:
-                        action_text = "Максимальне значення"
-                    elif "COUNT(" in sql_query:
-                        action_text = "Знайдено всього автомобілів"
-                        unit = "шт."
-                    elif "AVG(" in sql_query:
-                        action_text = "Середня ринкова ціна"
-
-                    if "MILEAGE_KM" in sql_query or "ПРОБІГ" in msg_upper:
-                        if "COUNT(" not in sql_query:
-                            unit = "км"
-                            if "AVG(" in sql_query: action_text = "Середній пробіг"
-
-                    # Formatting Text
-                    if unit == "шт.":
-                        text_to_send = f"📊 **Аналітика ринку від DeepAuto:**\n\n{action_text}: **{formatted_val} {unit}**."
-                    else:
-                        text_to_send = f"📊 **Аналітика ринку від DeepAuto:**\n\n{action_text} за цим запитом: **{formatted_val} {unit}** (на основі {count_val} авто)."
-
-                    await status_msg.edit_text(text_to_send, parse_mode="Markdown")
+                    await status_msg.edit_text(f"📊 **Результат аналітики:** {formatted_val}", parse_mode="Markdown")
                 else:
-                    await status_msg.edit_text("📭 За вашим запитом немає даних для розрахунку.")
+                    await status_msg.edit_text("📭 Немає даних для обчислення.")
                 return
 
-            # TABLE (displaying the top 5 cars)
-            reply_text = f"📊 **Знайдено в базі даних (Запит оброблено DeepAuto):**\n\n"
-            for i, car in enumerate(cars[:5], 1):
-                # NoneType protection for price and mileage!
-                price_raw = car.get('price_usd')
-                price_text = f"{price_raw:,}".replace(",", " ") if price_raw is not None else "Не вказано"
-
-                mileage_raw = car.get('mileage_km')
-                mileage_text = f"{mileage_raw:,}".replace(",", " ") if mileage_raw is not None else "0"
-
-                reply_text += (
-                    f"{i}. 🚗 **{car.get('make', 'Невідомо')} {car.get('model', '')}** ({car.get('year', '—')} рік)\n"
-                    f"💰 Ціна: **{price_text} $** \n"
-                    f"🛣 Пробіг: **{mileage_text} км**\n"
-                    f"🎨 Колір: {car.get('color') or 'Не вказано'}\n\n"
-                )
-
-            await status_msg.edit_text(reply_text, parse_mode="Markdown")
-
         else:
-            await status_msg.edit_text(
-                "📭 За вашим запитом у базі даних нічого не знайдено. Спробуйте змінити критерії.")
-
+            await status_msg.edit_text("📭 За вашим запитом нічого не знайдено.")
 
     except Exception as e:
-        logging.exception(f"Exception caught inside general text evaluation processor flow: {e}")
-        await status_msg.edit_text("❌ Сталася помилка при обробці результатів. Спробуйте інший запит.")
+        logger.exception("Text query failed: %s", e)
+        await status_msg.edit_text("❌ Сталася помилка при обробці текстового запиту.")

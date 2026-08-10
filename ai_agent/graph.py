@@ -2,6 +2,7 @@ from typing import Annotated, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
+from functools import lru_cache
 
 from ai_agent.llm import generate_car_verdict, generate_sql_via_qwen
 from ai_agent.sql_guard import validate_sql
@@ -34,8 +35,6 @@ def _detect_intent(state: AgentState) -> AgentState:
     text = state["user_text"].lower()
     if "auto.ria.com" in text:
         state["intent"] = "analyze_car"
-    elif any(kw in text for kw in ("ціна", "пробіг", "скільки", "average", "avg", "min", "max", "count")):
-        state["intent"] = "analytics"
     else:
         state["intent"] = "analytics"
     return state
@@ -158,15 +157,9 @@ def build_graph():
 
     return graph.compile()
 
-
-_graph = None
-
-
+@lru_cache(maxsize=1)
 def get_graph():
-    global _graph
-    if _graph is None:
-        _graph = build_graph()
-    return _graph
+    return build_graph()
 
 
 async def ask(user_text: str) -> dict:

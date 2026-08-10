@@ -1,0 +1,32 @@
+[35m.idea/.gitignore[m[36m:[m# Editor-[1;31mbase[md HTTP Client requests
+[35mai_agent/graph.py[m[36m:[m    tool_query_data[1;31mbase[m,
+[35mai_agent/tools.py[m[36m:[masync def tool_query_data[1;31mbase[m(sql: str) -> list[dict]:
+[35mapi/routers/ai.py[m[36m:[masync def ask_ai_data[1;31mbase[m(request: UserRequest):
+[35mauctions/auto-auction-damage-model.ipynb[m[36m:[m    "    print(f\"Обробка: {os.path.[1;31mbase[mname(img_path)}\")\n",
+[35mauctions/copart_scraping/parser_link_auct.py[m[36m:[m                    f"Page {page}: found {links_found_on_page} new lots. Total unique data[1;31mbase[m records: {len(unique_lots)}")
+[35mauctions/copart_scraping/parser_link_auct.py[m[36m:[m    print(f"\nExecution completed. Data[1;31mbase[m '{filename_to_save}' successfully updated.")
+[35mbot/handlers.py[m[36m:[mimport [1;31mbase[m64
+[35mbot/handlers.py[m[36m:[m# 1. Get the [1;31mbase[m directory of the project relative to this file
+[35mbot/handlers.py[m[36m:[m                        InputMediaPhoto(media=BufferedInputFile([1;31mbase[m64.b64decode(p), filename="cached.jpg"))
+[35mbot/handlers.py[m[36m:[m                        InputMediaPhoto(media=BufferedInputFile([1;31mbase[m64.b64decode(img_b64), filename=f"cascade_{i}.jpg"))
+[35mcore/config.py[m[36m:[m    [1;31mbase[m_dir: Path = Field(default_factory=lambda: Path(__file__).resolve().parent.parent)
+[35mcore/config.py[m[36m:[m    # --- Data[1;31mbase[m ---
+[35mcore/config.py[m[36m:[m            self.models_dir = self.[1;31mbase[m_dir / "models_ML"
+[35mcore/config.py[m[36m:[m            self.feature_columns_path = self.[1;31mbase[m_dir / "feature_columns3.json"
+[35mcore/config.py[m[36m:[m            "data[1;31mbase[m": self.db_name,
+[35mcore/db.py[m[36m:[m        raise RuntimeError("Data[1;31mbase[m pool is not initialized. Call init_pool() first.")
+[35mdamage_detection/analyzer.py[m[36m:[mimport [1;31mbase[m64
+[35mdamage_detection/analyzer.py[m[36m:[m                processed_images_b64.append([1;31mbase[m64.b64encode(img_byte_arr.getvalue()).decode("utf-8"))
+[35mdamage_detection/analyzer.py[m[36m:[m                processed_images_b64.append([1;31mbase[m64.b64encode(res.content).decode("utf-8"))
+[35mmodules/base.py[m[36m:[m    An abstract [1;31mbase[m class for all parsers in the project.
+[35mscraper_main/scraper.py[m[36m:[m    "data[1;31mbase[m": os.getenv("DB_NAME"),
+[35mscraper_main/scraper.py[m[36m:[m    gen_[1;31mbase[m_div = soup.find('div', id='basicInfoGenerationBase')
+[35mscraper_main/scraper.py[m[36m:[m    if gen_[1;31mbase[m_div:
+[35mscraper_main/scraper.py[m[36m:[m        parts = [span.get_text(strip=True).replace('•', '').strip() for span in gen_[1;31mbase[m_div.find_all('span') if
+[35mscraper_main/spider.py[m[36m:[m        [1;31mbase[m_url = "https://auto.ria.com/uk/search/?"
+[35mscraper_main/spider.py[m[36m:[m        return [1;31mbase[m_url + "&".join(query_parts)
+[35mscraping/__init__.py[m[36m:[mfrom scraping.[1;31mbase[m import BaseParser
+[35mscraping/autoria/html_parser.py[m[36m:[m    gen_[1;31mbase[m_div = soup.find("div", id="basicInfoGenerationBase")
+[35mscraping/autoria/html_parser.py[m[36m:[m    if gen_[1;31mbase[m_div:
+[35mscraping/autoria/html_parser.py[m[36m:[m            for span in gen_[1;31mbase[m_div.find_all("span")
+[35mscraping/autoria/parser.py[m[36m:[mfrom scraping.[1;31mbase[m import BaseParser
