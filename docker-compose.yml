@@ -1,51 +1,45 @@
 version: '3.8'
 
 services:
-  # 1. Проксі-сервер FlareSolverr для фонового обходу Cloudflare Turnstile
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
     environment:
       - LOG_LEVEL=info
-      - LOG_HTML=false
-      - CAPTCHA_SOLVER=none # Використовує вбудований пасивний обхід
-      - TZ=Europe/Kyiv
+      - CAPTCHA_SOLVER=none
     ports:
       - "8191:8191"
     restart: unless-stopped
 
-  # 2. ШІ-мікросервіс DeepAuto (CatBoost, RT-DETR, Qwen)
   api_server:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
     environment:
       - PYTHONPATH=/app
       - IS_DOCKER=true
       - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
     volumes:
       - .:/app
-      - ./models_ML:/app/models_ML  # Ваги моделей з твого ПК
+      - ./models_ML:/app/models_ML
     ports:
-      - "8000:8000"                  # Порт для тестів через Postman
+      - "8000:8000"
     extra_hosts:
-      - "host.docker.internal:host-gateway" # Зв'язок з хостом
-    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
 
-  # 3. Головний сервіс Telegram-бота (aiogram)
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/bot.Dockerfile
     depends_on:
-      - api_server                  # Бот стартує після підняття ШІ-сервера
-      - flaresolverr                # Бот стартує після підняття проксі
+      - api_server
+      - flaresolverr
     environment:
       - IS_DOCKER=true
       - AI_SERVICE_URL=http://api_server:8000
       - BOT_TOKEN=${BOT_TOKEN}
       - PYTHONPATH=/app
-      - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
     volumes:
       - .:/app
-      - ./models_ML:/app/models_ML
-      - ./data:/app/data
-    command: python bot/mainbot.py  # Головна команда запуску бота
     restart: unless-stopped

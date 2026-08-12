@@ -1,9 +1,11 @@
-import asyncio
 import base64
 import logging
+import httpx
 from aiogram import Router, F
 from aiogram.filters import CommandStart
 from aiogram.types import Message, InputMediaPhoto, BufferedInputFile
+
+from core.config import get_settings
 
 # Беремо лише ask() — усю іншу логіку та HTTP-запити він зробить сам усередині LangGraph
 from ai_agent import ask
@@ -29,10 +31,16 @@ async def handle_auto_link(message: Message):
         "_Це може зайняти близько хвилини (скрапінг, пошук аукціонів, CV, генерація вердикту)_",
         parse_mode="Markdown"
     )
-
+    settings = get_settings()
     try:
-        # 1. ВИРІШЕННЯ ПРОБЛЕМ 1 та 2: Викликаємо граф напряму, ніяких ручних httpx та settings
-        state = await ask(message.text)
+        async with httpx.AsyncClient(timeout=httpx.Timeout(120.0, connect=10.0)) as client:
+            response = await client.post(
+                f"{settings.ai_service_url}/api/ai/agent",
+                json={"text": message.text},
+            )
+            response.raise_for_status()
+            state = response.json().get("result", {})
+
         car_data = state.get("car_data") or {}
 
         if "error" in car_data or not car_data:
@@ -104,15 +112,20 @@ async def handle_ai_text_query(message: Message):
         return
 
     status_msg = await message.answer("🤖 Опрацьовую запит... ⏳")
+    settings = get_settings()
 
     try:
-        # ВИРІШЕННЯ ПРОБЛЕМИ 3: Правильний парсинг AgentState замість {"status": "success"}
-        state = await ask(message.text)
-        db_result = state.get("db_result")
+        async with httpx.AsyncClient(timeout=httpx.Timeout(60.0, connect=10.0)) as client:
+            response = await client.post(
+                f"{settings.ai_service_url}/api/ai/agent",
+                json={"text": message.text},
+            )
+            response.raise_for_status()
+            state = response.json().get("result", {})
 
+        db_result = state.get("db_result")
         if db_result and isinstance(db_result, list) and len(db_result) > 0:
             first_row = db_result[0]
-
             # Аналітична відповідь (агреговані дані)
             if len(first_row.keys()) <= 2 and not any(k in first_row for k in ["make", "model"]):
                 col_name = list(first_row.keys())[0]
@@ -125,14 +138,6 @@ async def handle_ai_text_query(message: Message):
                     await status_msg.edit_text("📭 Немає даних для обчислення.")
                 return
 
-            # Список авто (ТОП-5)
-            reply = "📊 **Результати пошуку в базі:**\n\n"
-            for i, car in enumerate(db_result[:5], 1):
-                price = f"{car.get('price_usd'):,}".replace(",", " ") if car.get("price_usd") else "—"
-                mileage = f"{car.get('mileage_km'):,}".replace(",", " ") if car.get("mileage_km") else "0"
-                reply += f"{i}. 🚗 **{car.get('make', '')} {car.get('model', '')}** ({car.get('year', '—')})\n💰 {price} $ | 🛣 {mileage} км\n\n"
-
-            await status_msg.edit_text(reply, parse_mode="Markdown")
         else:
             await status_msg.edit_text("📭 За вашим запитом нічого не знайдено.")
 

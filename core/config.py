@@ -42,7 +42,7 @@ class Settings(BaseSettings):
         if self.models_dir is None:
             self.models_dir = self.base_dir / "models_ML"
         if self.feature_columns_path is None:
-            self.feature_columns_path = self.base_dir / "feature_columns3.json"
+            self.feature_columns_path = self.base_dir / "feature_columns.json"
 
     @property
     def db_connect_args(self) -> dict:

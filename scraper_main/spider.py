@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
-from scraper_main.scraper import BRANDS_TO_SCRAPE
+from scraper_main.config_brands import BRANDS_TO_SCRAPE
 
 
 class SpiderConfig:
