@@ -1,10 +1,11 @@
+import logging
 import httpx
+from .html_parser import parse_car_html
 
-from scraping.autoria.html_parser import parse_car_html
-from scraping.base import BaseParser
+logger = logging.getLogger(__name__)
 
 
-class AutoRiaParser(BaseParser):
+class AutoRiaParser:
     def __init__(self):
         self.headers = {
             "User-Agent": (
@@ -25,8 +26,11 @@ class AutoRiaParser(BaseParser):
                 )
                 if response.status_code != 200:
                     return {"error": f"Сайт повернув статус {response.status_code}"}
+
                 return parse_car_html(response.text, url)
+
             except httpx.RequestError as e:
                 return {"error": f"Помилка мережі: {str(e)}"}
             except Exception as e:
+                logger.exception("Parsing error in AutoRiaParser")
                 return {"error": f"Сталася помилка при парсингу: {str(e)}"}

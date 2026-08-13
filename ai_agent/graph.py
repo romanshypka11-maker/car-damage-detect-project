@@ -33,7 +33,8 @@ class AgentState(TypedDict):
 
 def _detect_intent(state: AgentState) -> AgentState:
     text = state["user_text"].lower()
-    if "auto.ria.com" in text:
+    keywords = ["auto.ria.com", "ria.com", "auto.ria.ua", "auto.ria"]
+    if any(keyword in text for keyword in keywords):
         state["intent"] = "analyze_car"
     else:
         state["intent"] = "analytics"
