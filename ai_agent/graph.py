@@ -1,9 +1,9 @@
 from typing import Annotated, TypedDict
-
+import time
+import logging
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from functools import lru_cache
-
 from ai_agent.llm import generate_car_verdict, generate_sql_via_qwen
 from ai_agent.sql_guard import validate_sql
 from ai_agent.tools import (
@@ -13,8 +13,9 @@ from ai_agent.tools import (
     tool_query_database,
     tool_scrape_autoria,
 )
-from core.db import fetch_all
+from core.timing import new_request_id, log_duration_async, log_duration_sync
 
+logger = logging.getLogger(__name__)
 
 class AgentState(TypedDict):
     messages: Annotated[list, add_messages]
@@ -40,13 +41,13 @@ def _detect_intent(state: AgentState) -> AgentState:
         state["intent"] = "analytics"
     return state
 
-
+@log_duration_async("scrape_car_node")
 async def _scrape_car_node(state: AgentState) -> AgentState:
     url = state["user_text"].strip()
     state["car_data"] = await tool_scrape_autoria(url)
     return state
 
-
+@log_duration_sync("predict_price_node")
 def _predict_price_node(state: AgentState) -> AgentState:
     data = state.get("car_data") or {}
     if "error" in data:
@@ -79,20 +80,24 @@ def _predict_price_node(state: AgentState) -> AgentState:
         "color": [data.get("color") or ""],
         "description": [(data.get("description") or "")[:300]],
     }
+    print("--- RAW FEATURES FOR CATBOOST ---")
+    print(features)
+    print ("- ---------------------------------")
+
     state["predicted_price"] = tool_predict_price(features)
     return state
 
-
-def _fetch_auction_photos_node(state: AgentState) -> AgentState:
+@log_duration_async("fetch_photos_node")
+async def _fetch_auction_photos_node(state: AgentState) -> AgentState:
     data = state.get("car_data") or {}
     vin = data.get("vin")
     if vin and len(vin) == 17:
-        state["auction_photos"] = tool_get_auction_photos(vin)
+        state["auction_photos"] = await tool_get_auction_photos(vin)
     else:
         state["auction_photos"] = []
     return state
 
-
+@log_duration_sync("analyze_damage_node")
 def _analyze_damage_node(state: AgentState) -> AgentState:
     photos = state.get("auction_photos") or []
     if photos:
@@ -104,7 +109,7 @@ def _analyze_damage_node(state: AgentState) -> AgentState:
         state["cv_reports"] = []
     return state
 
-
+@log_duration_async("generate_verdict_node")
 async def _generate_verdict_node(state: AgentState) -> AgentState:
     state["verdict"] = await generate_car_verdict(
         car_data=state.get("car_data") or {},
@@ -118,10 +123,12 @@ async def _analytics_node(state: AgentState) -> AgentState:
     raw_sql = await generate_sql_via_qwen(state["user_text"])
     validated = validate_sql(raw_sql)
     state["sql_query"] = validated
+
     if validated:
-        state["db_result"] = await fetch_all(validated)
+        state["db_result"] = await tool_query_database(validated)
     else:
         state["db_result"] = []
+
     return state
 
 
@@ -164,6 +171,9 @@ def get_graph():
 
 
 async def ask(user_text: str) -> dict:
+    rid = new_request_id()
+    logger.info("[%s] New request: %s", rid, user_text[:80])
+
     graph = get_graph()
     initial_state: AgentState = {
         "messages": [],
@@ -179,5 +189,7 @@ async def ask(user_text: str) -> dict:
         "verdict": None,
         "response": None,
     }
+    start = time.perf_counter()
     result = await graph.ainvoke(initial_state)
+    logger.info("[%s] TOTAL graph.ainvoke took %.0fms", rid, (time.perf_counter() - start) * 1000)
     return dict(result)

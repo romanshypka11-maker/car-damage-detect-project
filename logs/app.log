@@ -1,0 +1,630 @@
+2026-09-02 10:11:42,760 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:11:43,318 - INFO - Start polling
+2026-09-02 10:11:43,357 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:11:50,776 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:12:27,049 - INFO - [9cd88a41] New request: https://auto.ria.com/uk/auto_audi_q7_39890885.html
+2026-09-02 10:12:27,926 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-09-02 10:12:28,099 - INFO - [9cd88a41] scrape_car_node took 1018ms
+2026-09-02 10:12:28,123 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-09-02 10:12:28,305 - INFO - [9cd88a41] predict_price_node took 204ms
+2026-09-02 10:12:28,307 - INFO - [Aggregator] Спроба отримати фото через Bidfax...
+2026-09-02 10:12:28,307 - INFO - [Bidfax] Шукаю VIN WA1VAAF7XJD019981 через DuckDuckGo...
+2026-09-02 10:12:30,176 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:30,177 - INFO - --- [DEBUG] RAW HTML ВІД ПОШУКОВИКА ---
+2026-09-02 10:12:30,178 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.7bcf94631b5964fa5ad7.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-09-02 10:12:30,178 - INFO - -----------------------------------
+2026-09-02 10:12:30,185 - INFO - [DEBUG] Усі знайдені href у видачі (перші 20):
+2026-09-02 10:12:30,185 - INFO -    1. /html/
+2026-09-02 10:12:30,185 - INFO -    2. 
+2026-09-02 10:12:30,186 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,186 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,186 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,187 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,187 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,187 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,187 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,188 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,188 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,189 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,189 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,189 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,190 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,190 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.e%2Draft.com%2Fregions%2FWA1VAAF7XJD009239&rut=8b78f1df7a37eaf3e617c45ff633590e399845bcb4406fb464e8408b439cfc81
+2026-09-02 10:12:30,190 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.e%2Draft.com%2Fregions%2FWA1VAAF7XJD009239&rut=8b78f1df7a37eaf3e617c45ff633590e399845bcb4406fb464e8408b439cfc81
+2026-09-02 10:12:30,191 - INFO - [Bidfax] Усі знайдені лінки Bidfax: []
+2026-09-02 10:12:30,192 - INFO - [9cd88a41] photo_source.Bidfax took 1885ms
+2026-09-02 10:12:30,192 - INFO - [Aggregator] Bidfax нічого не знайшов.
+2026-09-02 10:12:30,192 - INFO - [Aggregator] Спроба отримати фото через PLC.ua...
+2026-09-02 10:12:30,193 - INFO - [PLC.ua] Шукаю VIN WA1VAAF7XJD019981 через Google...
+2026-09-02 10:12:32,042 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:32,049 - INFO - --- [DEBUG] ЗНАЙДЕНО ЧИСТИЙ ЛІНК: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-09-02 10:12:39,647 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:39,654 - INFO - [9cd88a41] photo_source.PLC.ua took 9461ms
+2026-09-02 10:12:39,655 - INFO - [Aggregator] PLC.ua нічого не знайшов.
+2026-09-02 10:12:39,655 - WARNING - [Aggregator] Фото для VIN WA1VAAF7XJD019981 не знайдено на жодному з джерел.
+2026-09-02 10:12:39,656 - INFO - [9cd88a41] photo_aggregator.total took 11349ms
+2026-09-02 10:12:39,656 - INFO - [9cd88a41] fetch_photos_node took 11350ms
+2026-09-02 10:12:39,664 - INFO - [9cd88a41] analyze_damage_node took 0ms
+2026-09-02 10:13:44,884 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+2026-09-02 10:13:44,887 - INFO - [9cd88a41] llm.generate_car_verdict took 65224ms
+2026-09-02 10:13:44,887 - INFO - [9cd88a41] generate_verdict_node took 65225ms
+2026-09-02 10:13:44,891 - INFO - [9cd88a41] TOTAL graph.ainvoke took 77822ms
+2026-09-02 10:13:44,927 - INFO - HTTP Request: POST http://api_server:8000/api/ai/agent "HTTP/1.1 200 OK"
+2026-09-02 10:13:44,940 - INFO - [9cd88a41] Bot received response in handle_auto_link
+2026-09-02 10:13:45,796 - INFO - Update id=108128691 is handled. Duration 82321 ms by bot id=8032886586
+2026-09-02 10:18:23,767 - WARNING - Received SIGTERM signal
+2026-09-02 10:18:23,773 - INFO - Polling stopped for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:18:23,774 - INFO - Polling stopped
+2026-09-02 10:18:23,886 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:18:24,035 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:18:31,884 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:18:31,950 - INFO - Start polling
+2026-09-02 10:18:31,987 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:18:34,871 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:18:50,043 - INFO - [bfc276d3] New request: https://auto.ria.com/uk/auto_audi_q7_39890885.html
+2026-09-02 10:18:50,332 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-09-02 10:18:50,458 - INFO - [bfc276d3] scrape_car_node took 372ms
+2026-09-02 10:18:50,481 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-09-02 10:18:50,700 - INFO - [bfc276d3] predict_price_node took 240ms
+2026-09-02 10:18:50,701 - INFO - [Aggregator] Спроба отримати фото через Bidfax...
+2026-09-02 10:18:50,702 - INFO - [Bidfax] Шукаю VIN WA1VAAF7XJD019981 через DuckDuckGo...
+2026-09-02 10:18:52,687 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:18:52,687 - INFO - --- [DEBUG] RAW HTML ВІД ПОШУКОВИКА ---
+2026-09-02 10:18:52,688 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.7bcf94631b5964fa5ad7.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-09-02 10:18:52,688 - INFO - -----------------------------------
+2026-09-02 10:18:52,694 - INFO - [DEBUG] Усі знайдені href у видачі (перші 20):
+2026-09-02 10:18:52,695 - INFO -    1. /html/
+2026-09-02 10:18:52,695 - INFO -    2. 
+2026-09-02 10:18:52,695 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:18:52,696 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:18:52,696 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:18:52,696 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:18:52,696 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:18:52,697 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:18:52,697 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:18:52,697 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:18:52,697 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:18:52,698 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:18:52,698 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:18:52,698 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:18:52,698 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwinbid.pro%2Fen%2F&rut=4b5a8c3bf33411a14b346da1da861993c910e869e67ab362b8552a800b21e4da
+2026-09-02 10:18:52,698 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwinbid.pro%2Fen%2F&rut=4b5a8c3bf33411a14b346da1da861993c910e869e67ab362b8552a800b21e4da
+2026-09-02 10:18:52,699 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwinbid.pro%2Fen%2F&rut=4b5a8c3bf33411a14b346da1da861993c910e869e67ab362b8552a800b21e4da
+2026-09-02 10:18:52,699 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwinbid.pro%2Fen%2F&rut=4b5a8c3bf33411a14b346da1da861993c910e869e67ab362b8552a800b21e4da
+2026-09-02 10:18:52,699 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:18:52,699 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:18:52,700 - INFO - [Bidfax] Усі знайдені лінки Bidfax: []
+2026-09-02 10:18:52,701 - INFO - [bfc276d3] photo_source.Bidfax took 1999ms
+2026-09-02 10:18:52,701 - INFO - [Aggregator] Bidfax нічого не знайшов.
+2026-09-02 10:18:52,701 - INFO - [Aggregator] Спроба отримати фото через PLC.ua...
+2026-09-02 10:18:52,702 - INFO - [PLC.ua] Шукаю VIN WA1VAAF7XJD019981 через Google...
+2026-09-02 10:18:54,502 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:18:54,508 - INFO - --- [DEBUG] ЗНАЙДЕНО ЧИСТИЙ ЛІНК: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-09-02 10:19:00,919 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:19:00,922 - INFO - [bfc276d3] photo_source.PLC.ua took 8221ms
+2026-09-02 10:19:00,923 - INFO - [Aggregator] PLC.ua нічого не знайшов.
+2026-09-02 10:19:00,923 - WARNING - [Aggregator] Фото для VIN WA1VAAF7XJD019981 не знайдено на жодному з джерел.
+2026-09-02 10:19:00,923 - INFO - [bfc276d3] photo_aggregator.total took 10222ms
+2026-09-02 10:19:00,924 - INFO - [bfc276d3] fetch_photos_node took 10223ms
+2026-09-02 10:19:00,925 - INFO - [bfc276d3] analyze_damage_node took 0ms
+2026-09-02 10:19:49,189 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+2026-09-02 10:19:49,191 - INFO - [bfc276d3] llm.generate_car_verdict took 48267ms
+2026-09-02 10:19:49,191 - INFO - [bfc276d3] generate_verdict_node took 48267ms
+2026-09-02 10:19:49,192 - INFO - [bfc276d3] TOTAL graph.ainvoke took 59120ms
+2026-09-02 10:19:49,194 - INFO - HTTP Request: POST http://api_server:8000/api/ai/agent "HTTP/1.1 200 OK"
+2026-09-02 10:19:49,198 - INFO - [bfc276d3] Bot received response in handle_auto_link
+2026-09-02 10:19:49,934 - INFO - Update id=108128692 is handled. Duration 60295 ms by bot id=8032886586
+2026-09-02 10:22:30,199 - WARNING - Received SIGTERM signal
+2026-09-02 10:22:30,200 - INFO - Polling stopped for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:22:30,201 - INFO - Polling stopped
+2026-09-02 10:22:30,326 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:22:30,453 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:22:34,438 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:22:34,502 - INFO - Start polling
+2026-09-02 10:22:34,538 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:22:41,788 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:23:01,256 - INFO - [d1bc19eb] New request: https://auto.ria.com/uk/auto_audi_q7_39890885.html
+2026-09-02 10:23:01,558 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-09-02 10:23:01,780 - INFO - [d1bc19eb] scrape_car_node took 481ms
+2026-09-02 10:23:01,788 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-09-02 10:23:02,078 - INFO - [d1bc19eb] predict_price_node took 297ms
+2026-09-02 10:23:02,080 - INFO - [Aggregator] Спроба отримати фото через Bidfax...
+2026-09-02 10:23:02,080 - INFO - [Bidfax] Шукаю VIN WA1VAAF7XJD019981 через DuckDuckGo...
+2026-09-02 10:23:03,917 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:23:03,918 - INFO - --- [DEBUG] RAW HTML ВІД ПОШУКОВИКА ---
+2026-09-02 10:23:03,918 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.7bcf94631b5964fa5ad7.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-09-02 10:23:04,053 - INFO - -----------------------------------
+2026-09-02 10:23:04,061 - INFO - [DEBUG] Усі знайдені href у видачі (перші 20):
+2026-09-02 10:23:04,061 - INFO -    1. /html/
+2026-09-02 10:23:04,061 - INFO -    2. 
+2026-09-02 10:23:04,062 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:23:04,062 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:23:04,062 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:23:04,063 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:23:04,063 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:23:04,063 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:23:04,063 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:23:04,064 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:23:04,064 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:23:04,064 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:23:04,064 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:23:04,065 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:23:04,065 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:23:04,065 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:23:04,073 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:23:04,074 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:23:04,075 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=cd0a0258a6d5773d7aaf368493174cd9907ccc538b9517cf97414c0d752c07cc
+2026-09-02 10:23:04,075 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=cd0a0258a6d5773d7aaf368493174cd9907ccc538b9517cf97414c0d752c07cc
+2026-09-02 10:23:04,076 - INFO - [Bidfax] Усі знайдені лінки Bidfax: []
+2026-09-02 10:23:04,077 - INFO - [d1bc19eb] photo_source.Bidfax took 1997ms
+2026-09-02 10:23:04,078 - INFO - [Aggregator] Bidfax нічого не знайшов.
+2026-09-02 10:23:04,078 - INFO - [Aggregator] Спроба отримати фото через PLC.ua...
+2026-09-02 10:23:04,079 - INFO - [PLC.ua] Шукаю VIN WA1VAAF7XJD019981 через Google...
+2026-09-02 10:23:05,824 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:23:05,832 - INFO - --- [DEBUG] ЗНАЙДЕНО ЧИСТИЙ ЛІНК: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-09-02 10:23:12,371 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:23:12,375 - INFO - [PLC.ua] HTML збережено для дебагу: /app/logs/plc_debug.html, довжина=27645 символів
+2026-09-02 10:23:12,377 - INFO - [PLC.ua] Витягнуто 0 фото-URL із HTML
+2026-09-02 10:23:12,378 - INFO - [d1bc19eb] photo_source.PLC.ua took 8299ms
+2026-09-02 10:23:12,378 - INFO - [Aggregator] PLC.ua нічого не знайшов.
+2026-09-02 10:23:12,378 - WARNING - [Aggregator] Фото для VIN WA1VAAF7XJD019981 не знайдено на жодному з джерел.
+2026-09-02 10:23:12,379 - INFO - [d1bc19eb] photo_aggregator.total took 10299ms
+2026-09-02 10:23:12,379 - INFO - [d1bc19eb] fetch_photos_node took 10299ms
+2026-09-02 10:23:12,380 - INFO - [d1bc19eb] analyze_damage_node took 0ms
+2026-09-02 10:23:47,788 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+2026-09-02 10:23:47,802 - INFO - [d1bc19eb] llm.generate_car_verdict took 35423ms
+2026-09-02 10:23:47,803 - INFO - [d1bc19eb] generate_verdict_node took 35423ms
+2026-09-02 10:23:47,820 - INFO - [d1bc19eb] TOTAL graph.ainvoke took 46537ms
+2026-09-02 10:23:47,851 - INFO - HTTP Request: POST http://api_server:8000/api/ai/agent "HTTP/1.1 200 OK"
+2026-09-02 10:23:47,863 - INFO - [d1bc19eb] Bot received response in handle_auto_link
+2026-09-02 10:23:48,506 - INFO - Update id=108128693 is handled. Duration 47585 ms by bot id=8032886586
+2026-09-02 10:30:49,911 - WARNING - Received SIGTERM signal
+2026-09-02 10:30:49,916 - INFO - Polling stopped for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:30:49,917 - INFO - Polling stopped
+2026-09-02 10:30:50,077 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:30:50,174 - INFO - Closing asyncpg connection pool...
+2026-09-02 10:30:54,704 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:30:54,768 - INFO - Start polling
+2026-09-02 10:30:54,819 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 10:31:01,491 - INFO - Initializing asyncpg connection pool...
+2026-09-02 10:31:12,638 - INFO - [7b6170f9] New request: https://auto.ria.com/uk/auto_audi_q7_39890885.html
+2026-09-02 10:31:13,746 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-09-02 10:31:14,040 - INFO - [7b6170f9] scrape_car_node took 1366ms
+2026-09-02 10:31:14,051 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-09-02 10:31:14,253 - INFO - [7b6170f9] predict_price_node took 212ms
+2026-09-02 10:31:14,255 - INFO - [Aggregator] Спроба отримати фото через Bidfax...
+2026-09-02 10:31:14,255 - INFO - [Bidfax] Шукаю VIN WA1VAAF7XJD019981 через DuckDuckGo...
+2026-09-02 10:31:16,293 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:31:16,294 - INFO - --- [DEBUG] RAW HTML ВІД ПОШУКОВИКА ---
+2026-09-02 10:31:16,294 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.7bcf94631b5964fa5ad7.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-09-02 10:31:16,295 - INFO - -----------------------------------
+2026-09-02 10:31:16,301 - INFO - [DEBUG] Усі знайдені href у видачі (перші 20):
+2026-09-02 10:31:16,302 - INFO -    1. /html/
+2026-09-02 10:31:16,302 - INFO -    2. 
+2026-09-02 10:31:16,302 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:31:16,303 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:31:16,303 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:31:16,303 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:31:16,303 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:31:16,304 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:31:16,304 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:31:16,304 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:31:16,305 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:31:16,305 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:31:16,305 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:31:16,305 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:31:16,306 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=e8a428401712442ca0e2a6895ada464970494a944940486c623aaceb3fd83364
+2026-09-02 10:31:16,306 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=e8a428401712442ca0e2a6895ada464970494a944940486c623aaceb3fd83364
+2026-09-02 10:31:16,306 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=e8a428401712442ca0e2a6895ada464970494a944940486c623aaceb3fd83364
+2026-09-02 10:31:16,306 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=e8a428401712442ca0e2a6895ada464970494a944940486c623aaceb3fd83364
+2026-09-02 10:31:16,307 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:31:16,307 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:31:16,308 - INFO - [Bidfax] Усі знайдені лінки Bidfax: []
+2026-09-02 10:31:16,308 - INFO - [7b6170f9] photo_source.Bidfax took 2053ms
+2026-09-02 10:31:16,308 - INFO - [Aggregator] Bidfax нічого не знайшов.
+2026-09-02 10:31:16,309 - INFO - [Aggregator] Спроба отримати фото через PLC.ua...
+2026-09-02 10:31:16,309 - INFO - [PLC.ua] Шукаю VIN WA1VAAF7XJD019981 через Google...
+2026-09-02 10:31:16,674 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:31:17,919 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:31:17,926 - INFO - [PLC.ua] Знайдено лінк: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/
+2026-09-02 10:31:23,552 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:31:23,553 - WARNING - [PLC.ua] Отримали Cloudflare challenge замість контенту
+2026-09-02 10:31:23,694 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:31:23,695 - INFO - [7b6170f9] photo_source.PLC.ua took 7388ms
+2026-09-02 10:31:23,695 - INFO - [Aggregator] PLC.ua нічого не знайшов.
+2026-09-02 10:31:23,696 - WARNING - [Aggregator] Фото для VIN WA1VAAF7XJD019981 не знайдено на жодному з джерел.
+2026-09-02 10:31:23,696 - INFO - [7b6170f9] photo_aggregator.total took 9444ms
+2026-09-02 10:31:23,696 - INFO - [7b6170f9] fetch_photos_node took 9444ms
+2026-09-02 10:31:23,698 - INFO - [7b6170f9] analyze_damage_node took 0ms
+2026-09-02 10:32:07,788 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+2026-09-02 10:32:07,790 - INFO - [7b6170f9] llm.generate_car_verdict took 44091ms
+2026-09-02 10:32:07,791 - INFO - [7b6170f9] generate_verdict_node took 44091ms
+2026-09-02 10:32:07,793 - INFO - [7b6170f9] TOTAL graph.ainvoke took 55131ms
+2026-09-02 10:32:07,796 - INFO - HTTP Request: POST http://api_server:8000/api/ai/agent "HTTP/1.1 200 OK"
+2026-09-02 10:32:07,801 - INFO - [7b6170f9] Bot received response in handle_auto_link
+2026-09-02 10:32:09,403 - INFO - Update id=108128694 is handled. Duration 57162 ms by bot id=8032886586
+2026-09-02 11:57:15,700 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-02 11:57:15,708 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-02 11:57:16,765 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 11:57:16,766 - WARNING - Sleep for 1.290308 seconds and try again... (tryings = 1, bot id = 8032886586)
+2026-09-02 11:57:18,065 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 11:57:18,065 - WARNING - Sleep for 1.682067 seconds and try again... (tryings = 2, bot id = 8032886586)
+2026-09-02 11:57:19,751 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 11:57:19,752 - WARNING - Sleep for 2.066038 seconds and try again... (tryings = 3, bot id = 8032886586)
+2026-09-02 12:40:23,077 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 12:40:23,077 - WARNING - Sleep for 2.772481 seconds and try again... (tryings = 4, bot id = 8032886586)
+2026-09-02 12:40:25,859 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 12:40:25,860 - WARNING - Sleep for 3.602825 seconds and try again... (tryings = 5, bot id = 8032886586)
+2026-09-02 12:40:29,483 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-02 12:40:29,515 - WARNING - Sleep for 4.647946 seconds and try again... (tryings = 6, bot id = 8032886586)
+2026-09-02 12:40:44,719 - INFO - Connection established (tryings = 7, bot id = 8032886586)
+2026-09-02 12:48:13,933 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-02 12:48:13,969 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-02 12:48:15,026 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:15,027 - WARNING - Sleep for 1.268046 seconds and try again... (tryings = 1, bot id = 8032886586)
+2026-09-02 12:48:16,304 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:16,305 - WARNING - Sleep for 1.799140 seconds and try again... (tryings = 2, bot id = 8032886586)
+2026-09-02 12:48:18,114 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:18,114 - WARNING - Sleep for 2.455642 seconds and try again... (tryings = 3, bot id = 8032886586)
+2026-09-02 12:48:20,585 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:20,585 - WARNING - Sleep for 3.019367 seconds and try again... (tryings = 4, bot id = 8032886586)
+2026-09-02 12:48:23,616 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:23,616 - WARNING - Sleep for 3.980750 seconds and try again... (tryings = 5, bot id = 8032886586)
+2026-09-02 12:48:27,615 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:27,615 - WARNING - Sleep for 4.783246 seconds and try again... (tryings = 6, bot id = 8032886586)
+2026-09-02 12:48:32,412 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:32,413 - WARNING - Sleep for 4.910996 seconds and try again... (tryings = 7, bot id = 8032886586)
+2026-09-02 12:48:37,343 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Name or service not known]
+2026-09-02 12:48:37,344 - WARNING - Sleep for 5.106541 seconds and try again... (tryings = 8, bot id = 8032886586)
+2026-09-02 12:48:50,464 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Temporary failure in name resolution]
+2026-09-02 12:48:50,465 - WARNING - Sleep for 5.093693 seconds and try again... (tryings = 9, bot id = 8032886586)
+2026-09-02 12:49:05,849 - INFO - Connection established (tryings = 10, bot id = 8032886586)
+2026-09-02 12:49:33,032 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-02 12:49:33,035 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-02 12:49:46,137 - INFO - Connection established (tryings = 1, bot id = 8032886586)
+2026-09-02 13:01:38,557 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-02 13:01:38,558 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-02 13:01:49,855 - INFO - Connection established (tryings = 1, bot id = 8032886586)
+2026-09-02 13:03:02,801 - WARNING - Received SIGTERM signal
+2026-09-02 13:03:02,808 - INFO - Polling stopped for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-02 13:03:02,811 - INFO - Polling stopped
+2026-09-02 13:03:02,937 - INFO - Closing asyncpg connection pool...
+2026-09-02 13:03:03,072 - INFO - Closing asyncpg connection pool...
+2026-09-02 13:03:56,245 - INFO - Initializing asyncpg connection pool...
+2026-09-02 13:04:03,006 - INFO - Initializing asyncpg connection pool...
+2026-09-02 13:04:03,083 - INFO - Start polling
+2026-09-02 13:04:03,371 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-07 07:49:26,564 - INFO - Initializing asyncpg connection pool...
+2026-09-07 07:51:13,096 - INFO - Initializing asyncpg connection pool...
+2026-09-07 07:51:13,168 - INFO - Start polling
+2026-09-07 07:51:13,241 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-07 08:48:28,799 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-07 08:48:28,802 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-07 08:48:40,342 - INFO - Connection established (tryings = 1, bot id = 8032886586)
+2026-09-07 09:48:50,705 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Temporary failure in name resolution]
+2026-09-07 09:48:50,711 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-07 09:48:57,759 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [No address associated with hostname]
+2026-09-07 09:48:57,760 - WARNING - Sleep for 1.371905 seconds and try again... (tryings = 1, bot id = 8032886586)
+2026-09-07 09:49:02,888 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-07 09:49:02,895 - WARNING - Sleep for 1.964746 seconds and try again... (tryings = 2, bot id = 8032886586)
+2026-09-07 09:49:48,304 - INFO - Connection established (tryings = 3, bot id = 8032886586)
+2026-09-07 09:51:39,421 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-07 09:51:39,422 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-07 09:51:45,741 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:51:45,743 - WARNING - Sleep for 1.330838 seconds and try again... (tryings = 1, bot id = 8032886586)
+2026-09-07 09:51:47,082 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:51:47,082 - WARNING - Sleep for 1.709479 seconds and try again... (tryings = 2, bot id = 8032886586)
+2026-09-07 09:51:48,798 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:51:48,799 - WARNING - Sleep for 2.210864 seconds and try again... (tryings = 3, bot id = 8032886586)
+2026-09-07 09:51:54,907 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-09-07 09:51:54,908 - WARNING - Sleep for 2.937620 seconds and try again... (tryings = 4, bot id = 8032886586)
+2026-09-07 09:52:18,896 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:52:18,897 - WARNING - Sleep for 3.932860 seconds and try again... (tryings = 5, bot id = 8032886586)
+2026-09-07 09:52:43,910 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:52:43,911 - WARNING - Sleep for 4.919869 seconds and try again... (tryings = 6, bot id = 8032886586)
+2026-09-07 09:52:48,845 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:52:48,845 - WARNING - Sleep for 5.161544 seconds and try again... (tryings = 7, bot id = 8032886586)
+2026-09-07 09:52:54,014 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:52:54,015 - WARNING - Sleep for 5.090210 seconds and try again... (tryings = 8, bot id = 8032886586)
+2026-09-07 09:52:59,115 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:52:59,116 - WARNING - Sleep for 4.981219 seconds and try again... (tryings = 9, bot id = 8032886586)
+2026-09-07 09:53:04,109 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:04,110 - WARNING - Sleep for 5.088389 seconds and try again... (tryings = 10, bot id = 8032886586)
+2026-09-07 09:53:09,209 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:09,210 - WARNING - Sleep for 4.929500 seconds and try again... (tryings = 11, bot id = 8032886586)
+2026-09-07 09:53:14,148 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:14,149 - WARNING - Sleep for 4.894268 seconds and try again... (tryings = 12, bot id = 8032886586)
+2026-09-07 09:53:19,053 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:19,054 - WARNING - Sleep for 4.893963 seconds and try again... (tryings = 13, bot id = 8032886586)
+2026-09-07 09:53:23,957 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:23,958 - WARNING - Sleep for 5.028004 seconds and try again... (tryings = 14, bot id = 8032886586)
+2026-09-07 09:53:29,000 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:29,000 - WARNING - Sleep for 5.065895 seconds and try again... (tryings = 15, bot id = 8032886586)
+2026-09-07 09:53:34,076 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:34,077 - WARNING - Sleep for 4.907010 seconds and try again... (tryings = 16, bot id = 8032886586)
+2026-09-07 09:53:38,994 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:38,994 - WARNING - Sleep for 5.111688 seconds and try again... (tryings = 17, bot id = 8032886586)
+2026-09-07 09:53:44,117 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:44,118 - WARNING - Sleep for 5.160168 seconds and try again... (tryings = 18, bot id = 8032886586)
+2026-09-07 09:53:49,289 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:49,290 - WARNING - Sleep for 5.126202 seconds and try again... (tryings = 19, bot id = 8032886586)
+2026-09-07 09:53:54,427 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:54,427 - WARNING - Sleep for 4.963093 seconds and try again... (tryings = 20, bot id = 8032886586)
+2026-09-07 09:53:59,402 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:53:59,403 - WARNING - Sleep for 4.944274 seconds and try again... (tryings = 21, bot id = 8032886586)
+2026-09-07 09:54:04,357 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:04,358 - WARNING - Sleep for 4.987002 seconds and try again... (tryings = 22, bot id = 8032886586)
+2026-09-07 09:54:09,355 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:09,356 - WARNING - Sleep for 4.900438 seconds and try again... (tryings = 23, bot id = 8032886586)
+2026-09-07 09:54:14,267 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:14,268 - WARNING - Sleep for 4.932567 seconds and try again... (tryings = 24, bot id = 8032886586)
+2026-09-07 09:54:19,215 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:19,215 - WARNING - Sleep for 5.090459 seconds and try again... (tryings = 25, bot id = 8032886586)
+2026-09-07 09:54:24,314 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:24,315 - WARNING - Sleep for 5.032923 seconds and try again... (tryings = 26, bot id = 8032886586)
+2026-09-07 09:54:29,358 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:29,359 - WARNING - Sleep for 4.873886 seconds and try again... (tryings = 27, bot id = 8032886586)
+2026-09-07 09:54:34,242 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:34,243 - WARNING - Sleep for 4.895035 seconds and try again... (tryings = 28, bot id = 8032886586)
+2026-09-07 09:54:39,148 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:39,149 - WARNING - Sleep for 4.868399 seconds and try again... (tryings = 29, bot id = 8032886586)
+2026-09-07 09:54:44,031 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:44,032 - WARNING - Sleep for 5.048405 seconds and try again... (tryings = 30, bot id = 8032886586)
+2026-09-07 09:54:49,089 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:49,090 - WARNING - Sleep for 5.206962 seconds and try again... (tryings = 31, bot id = 8032886586)
+2026-09-07 09:54:54,304 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:54,304 - WARNING - Sleep for 5.089548 seconds and try again... (tryings = 32, bot id = 8032886586)
+2026-09-07 09:54:59,405 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:54:59,405 - WARNING - Sleep for 4.963655 seconds and try again... (tryings = 33, bot id = 8032886586)
+2026-09-07 09:55:04,379 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:04,379 - WARNING - Sleep for 4.883835 seconds and try again... (tryings = 34, bot id = 8032886586)
+2026-09-07 09:55:09,273 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:09,274 - WARNING - Sleep for 4.940473 seconds and try again... (tryings = 35, bot id = 8032886586)
+2026-09-07 09:55:14,225 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:14,225 - WARNING - Sleep for 4.923955 seconds and try again... (tryings = 36, bot id = 8032886586)
+2026-09-07 09:55:19,159 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:19,159 - WARNING - Sleep for 5.000353 seconds and try again... (tryings = 37, bot id = 8032886586)
+2026-09-07 09:55:24,167 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:24,168 - WARNING - Sleep for 5.048656 seconds and try again... (tryings = 38, bot id = 8032886586)
+2026-09-07 09:55:29,231 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:29,231 - WARNING - Sleep for 4.996339 seconds and try again... (tryings = 39, bot id = 8032886586)
+2026-09-07 09:55:34,242 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:34,242 - WARNING - Sleep for 4.952731 seconds and try again... (tryings = 40, bot id = 8032886586)
+2026-09-07 09:55:39,205 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:39,205 - WARNING - Sleep for 5.034815 seconds and try again... (tryings = 41, bot id = 8032886586)
+2026-09-07 09:55:44,251 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:44,252 - WARNING - Sleep for 4.955484 seconds and try again... (tryings = 42, bot id = 8032886586)
+2026-09-07 09:55:49,217 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:49,218 - WARNING - Sleep for 4.963195 seconds and try again... (tryings = 43, bot id = 8032886586)
+2026-09-07 09:55:54,189 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:54,190 - WARNING - Sleep for 4.956249 seconds and try again... (tryings = 44, bot id = 8032886586)
+2026-09-07 09:55:59,156 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:55:59,156 - WARNING - Sleep for 5.006542 seconds and try again... (tryings = 45, bot id = 8032886586)
+2026-09-07 09:56:04,172 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:04,173 - WARNING - Sleep for 5.011808 seconds and try again... (tryings = 46, bot id = 8032886586)
+2026-09-07 09:56:09,196 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:09,198 - WARNING - Sleep for 5.007286 seconds and try again... (tryings = 47, bot id = 8032886586)
+2026-09-07 09:56:14,215 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:14,216 - WARNING - Sleep for 5.008116 seconds and try again... (tryings = 48, bot id = 8032886586)
+2026-09-07 09:56:19,235 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:19,235 - WARNING - Sleep for 4.913116 seconds and try again... (tryings = 49, bot id = 8032886586)
+2026-09-07 09:56:24,157 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:24,157 - WARNING - Sleep for 4.914042 seconds and try again... (tryings = 50, bot id = 8032886586)
+2026-09-07 09:56:29,081 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:29,081 - WARNING - Sleep for 4.735174 seconds and try again... (tryings = 51, bot id = 8032886586)
+2026-09-07 09:56:33,830 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:33,831 - WARNING - Sleep for 4.900906 seconds and try again... (tryings = 52, bot id = 8032886586)
+2026-09-07 09:56:38,741 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:38,742 - WARNING - Sleep for 4.833290 seconds and try again... (tryings = 53, bot id = 8032886586)
+2026-09-07 09:56:43,587 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:43,587 - WARNING - Sleep for 4.927846 seconds and try again... (tryings = 54, bot id = 8032886586)
+2026-09-07 09:56:48,526 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:48,526 - WARNING - Sleep for 4.896106 seconds and try again... (tryings = 55, bot id = 8032886586)
+2026-09-07 09:56:53,429 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:53,430 - WARNING - Sleep for 4.927362 seconds and try again... (tryings = 56, bot id = 8032886586)
+2026-09-07 09:56:58,370 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:56:58,371 - WARNING - Sleep for 4.911365 seconds and try again... (tryings = 57, bot id = 8032886586)
+2026-09-07 09:57:03,296 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:03,297 - WARNING - Sleep for 5.070034 seconds and try again... (tryings = 58, bot id = 8032886586)
+2026-09-07 09:57:08,379 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:08,379 - WARNING - Sleep for 5.000086 seconds and try again... (tryings = 59, bot id = 8032886586)
+2026-09-07 09:57:13,390 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:13,391 - WARNING - Sleep for 5.009388 seconds and try again... (tryings = 60, bot id = 8032886586)
+2026-09-07 09:57:18,411 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:18,412 - WARNING - Sleep for 4.924758 seconds and try again... (tryings = 61, bot id = 8032886586)
+2026-09-07 09:57:23,343 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:23,344 - WARNING - Sleep for 4.960418 seconds and try again... (tryings = 62, bot id = 8032886586)
+2026-09-07 09:57:28,315 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:28,316 - WARNING - Sleep for 5.121294 seconds and try again... (tryings = 63, bot id = 8032886586)
+2026-09-07 09:57:33,448 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:33,448 - WARNING - Sleep for 4.943676 seconds and try again... (tryings = 64, bot id = 8032886586)
+2026-09-07 09:57:38,401 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:38,402 - WARNING - Sleep for 5.106274 seconds and try again... (tryings = 65, bot id = 8032886586)
+2026-09-07 09:57:43,519 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:43,520 - WARNING - Sleep for 4.871547 seconds and try again... (tryings = 66, bot id = 8032886586)
+2026-09-07 09:57:48,402 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:48,403 - WARNING - Sleep for 4.978262 seconds and try again... (tryings = 67, bot id = 8032886586)
+2026-09-07 09:57:53,390 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:53,391 - WARNING - Sleep for 5.049612 seconds and try again... (tryings = 68, bot id = 8032886586)
+2026-09-07 09:57:58,451 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:57:58,452 - WARNING - Sleep for 4.893306 seconds and try again... (tryings = 69, bot id = 8032886586)
+2026-09-07 09:58:03,355 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:03,356 - WARNING - Sleep for 4.999410 seconds and try again... (tryings = 70, bot id = 8032886586)
+2026-09-07 09:58:08,366 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:08,366 - WARNING - Sleep for 5.002692 seconds and try again... (tryings = 71, bot id = 8032886586)
+2026-09-07 09:58:13,380 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:13,380 - WARNING - Sleep for 4.958321 seconds and try again... (tryings = 72, bot id = 8032886586)
+2026-09-07 09:58:18,384 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:18,384 - WARNING - Sleep for 4.859397 seconds and try again... (tryings = 73, bot id = 8032886586)
+2026-09-07 09:58:23,252 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:23,252 - WARNING - Sleep for 5.157567 seconds and try again... (tryings = 74, bot id = 8032886586)
+2026-09-07 09:58:28,421 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 09:58:28,422 - WARNING - Sleep for 4.883934 seconds and try again... (tryings = 75, bot id = 8032886586)
+2026-09-07 09:58:43,688 - INFO - Connection established (tryings = 76, bot id = 8032886586)
+2026-09-07 10:02:15,790 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-07 10:02:15,791 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-07 10:02:24,756 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:24,762 - WARNING - Sleep for 1.145010 seconds and try again... (tryings = 1, bot id = 8032886586)
+2026-09-07 10:02:25,916 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:25,916 - WARNING - Sleep for 1.530263 seconds and try again... (tryings = 2, bot id = 8032886586)
+2026-09-07 10:02:27,454 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:27,454 - WARNING - Sleep for 2.108813 seconds and try again... (tryings = 3, bot id = 8032886586)
+2026-09-07 10:02:29,570 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:29,571 - WARNING - Sleep for 2.763024 seconds and try again... (tryings = 4, bot id = 8032886586)
+2026-09-07 10:02:32,342 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:32,342 - WARNING - Sleep for 3.600481 seconds and try again... (tryings = 5, bot id = 8032886586)
+2026-09-07 10:02:35,955 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:35,956 - WARNING - Sleep for 4.662066 seconds and try again... (tryings = 6, bot id = 8032886586)
+2026-09-07 10:02:40,628 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:40,628 - WARNING - Sleep for 5.018209 seconds and try again... (tryings = 7, bot id = 8032886586)
+2026-09-07 10:02:45,657 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:45,658 - WARNING - Sleep for 5.034240 seconds and try again... (tryings = 8, bot id = 8032886586)
+2026-09-07 10:02:50,702 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:50,703 - WARNING - Sleep for 4.916910 seconds and try again... (tryings = 9, bot id = 8032886586)
+2026-09-07 10:02:55,628 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:02:55,629 - WARNING - Sleep for 5.037215 seconds and try again... (tryings = 10, bot id = 8032886586)
+2026-09-07 10:03:00,676 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:00,677 - WARNING - Sleep for 5.076998 seconds and try again... (tryings = 11, bot id = 8032886586)
+2026-09-07 10:03:05,763 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:05,763 - WARNING - Sleep for 4.787227 seconds and try again... (tryings = 12, bot id = 8032886586)
+2026-09-07 10:03:10,561 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:10,561 - WARNING - Sleep for 5.004048 seconds and try again... (tryings = 13, bot id = 8032886586)
+2026-09-07 10:03:15,576 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:15,577 - WARNING - Sleep for 5.004379 seconds and try again... (tryings = 14, bot id = 8032886586)
+2026-09-07 10:03:20,591 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:20,593 - WARNING - Sleep for 5.080570 seconds and try again... (tryings = 15, bot id = 8032886586)
+2026-09-07 10:03:25,681 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:25,681 - WARNING - Sleep for 4.925572 seconds and try again... (tryings = 16, bot id = 8032886586)
+2026-09-07 10:03:30,620 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:30,620 - WARNING - Sleep for 4.757419 seconds and try again... (tryings = 17, bot id = 8032886586)
+2026-09-07 10:03:35,388 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:35,389 - WARNING - Sleep for 4.812960 seconds and try again... (tryings = 18, bot id = 8032886586)
+2026-09-07 10:03:40,211 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:40,212 - WARNING - Sleep for 4.867941 seconds and try again... (tryings = 19, bot id = 8032886586)
+2026-09-07 10:03:45,092 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:45,092 - WARNING - Sleep for 4.943439 seconds and try again... (tryings = 20, bot id = 8032886586)
+2026-09-07 10:03:50,046 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:50,047 - WARNING - Sleep for 4.934178 seconds and try again... (tryings = 21, bot id = 8032886586)
+2026-09-07 10:03:54,985 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:03:54,986 - WARNING - Sleep for 5.056673 seconds and try again... (tryings = 22, bot id = 8032886586)
+2026-09-07 10:04:00,052 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:00,053 - WARNING - Sleep for 4.841771 seconds and try again... (tryings = 23, bot id = 8032886586)
+2026-09-07 10:04:04,905 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:04,905 - WARNING - Sleep for 4.905631 seconds and try again... (tryings = 24, bot id = 8032886586)
+2026-09-07 10:04:09,822 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:09,823 - WARNING - Sleep for 5.145383 seconds and try again... (tryings = 25, bot id = 8032886586)
+2026-09-07 10:04:14,978 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:14,979 - WARNING - Sleep for 4.972788 seconds and try again... (tryings = 26, bot id = 8032886586)
+2026-09-07 10:04:19,961 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:19,963 - WARNING - Sleep for 4.989374 seconds and try again... (tryings = 27, bot id = 8032886586)
+2026-09-07 10:04:24,966 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:24,967 - WARNING - Sleep for 4.916046 seconds and try again... (tryings = 28, bot id = 8032886586)
+2026-09-07 10:04:29,892 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:29,893 - WARNING - Sleep for 5.031395 seconds and try again... (tryings = 29, bot id = 8032886586)
+2026-09-07 10:04:34,935 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 10:04:34,936 - WARNING - Sleep for 4.901225 seconds and try again... (tryings = 30, bot id = 8032886586)
+2026-09-07 11:04:35,065 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connect call failed ('149.154.166.110', 443)]
+2026-09-07 11:04:35,066 - WARNING - Sleep for 4.926037 seconds and try again... (tryings = 31, bot id = 8032886586)
+2026-09-07 17:01:17,798 - INFO - Connection established (tryings = 32, bot id = 8032886586)
+2026-09-07 18:03:53,604 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-07 18:03:53,606 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-07 18:04:04,768 - INFO - Connection established (tryings = 1, bot id = 8032886586)
+2026-09-08 16:42:06,816 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-09-08 16:42:07,226 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8032886586)
+2026-09-08 16:42:19,798 - INFO - Connection established (tryings = 1, bot id = 8032886586)
+2026-09-08 16:45:41,616 - WARNING - Received SIGTERM signal
+2026-09-08 16:45:41,655 - INFO - Polling stopped for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-08 16:45:41,658 - INFO - Polling stopped
+2026-09-08 16:45:41,871 - INFO - Closing asyncpg connection pool...
+2026-09-08 16:45:41,931 - INFO - Closing asyncpg connection pool...
+2026-09-08 16:56:17,430 - INFO - Initializing asyncpg connection pool...
+2026-09-08 16:56:17,723 - INFO - Start polling
+2026-09-08 16:56:17,762 - INFO - Run polling for bot @deep_autobot id=8032886586 - 'DeepAuto'
+2026-09-08 16:56:56,306 - INFO - Initializing asyncpg connection pool...

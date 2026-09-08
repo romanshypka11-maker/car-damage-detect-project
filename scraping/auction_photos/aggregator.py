@@ -1,6 +1,7 @@
 import logging
 from .sources.plc_ua import PlcUaSource
 from .sources.bidfax import BidfaxSource
+from core.timing import log_duration
 
 logger = logging.getLogger(__name__)
 
@@ -20,22 +21,26 @@ class PhotoAggregator:
         if not vin or vin == "Прихований":
             return []
 
-        for source in self.sources:
-            try:
-                logger.info(f"[Aggregator] Спроба отримати фото через {source.name}...")
-                photos = await source.search_by_vin(vin)
+        async with log_duration("photo_aggregator.total"):
+            for source in self.sources:
+                try:
+                    logger.info(f"[Aggregator] Спроба отримати фото через {source.name}...")
 
-                # Якщо знайшли — повертаємо одразу і виходимо (коротке замикання)
-                if photos:
-                    logger.info(f"[Aggregator] Успішно! Знайдено {len(photos)} фото через {source.name}")
-                    return photos
+                    async with log_duration(f"photo_source.{source.name}"):
+                        photos = await source.search_by_vin(vin)
 
-                logger.info(f"[Aggregator] {source.name} нічого не знайшов.")
+                    # Якщо знайшли — логуємо і повертаємо
+                    if photos:
+                        logger.info(f"[Aggregator] Успішно! Знайдено {len(photos)} фото через {source.name}")
+                        for i, p_url in enumerate(photos, 1):
+                            logger.info(f"    🔗 Фото {i}: {p_url}")
+                        return photos
 
-            except Exception as e:
-                # Якщо джерело впало (таймаут, помилка сайту), логуємо і йдемо далі
-                logger.error(f"[Aggregator] Помилка джерела {source.name}: {e}")
-                continue
+                    logger.info(f"[Aggregator] {source.name} нічого не знайшов.")
 
-        logger.warning(f"[Aggregator] Фото для VIN {vin} не знайдено на жодному з джерел.")
-        return []
+                except Exception as e:
+                    logger.error(f"[Aggregator] Помилка джерела {source.name}: {e}")
+                    continue
+
+            logger.warning(f"[Aggregator] Фото для VIN {vin} не знайдено на жодному з джерел.")
+            return []

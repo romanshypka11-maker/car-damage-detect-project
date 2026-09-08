@@ -11,7 +11,7 @@ from PIL import Image
 from rfdetr import RFDETRMedium
 
 from core.config import get_settings
-
+from core.timing import log_duration_sync
 logger = logging.getLogger(__name__)
 
 ZONE_CLASSES = {
@@ -54,7 +54,7 @@ DETAIL_DAMAGE_CLASSES = {
 _zone_model: RFDETRMedium | None = None
 _defects_model: RFDETRMedium | None = None
 
-
+@log_duration_sync("cv.zone_model_predict")
 def _get_zone_model() -> RFDETRMedium:
     global _zone_model
     if _zone_model is None:
@@ -66,7 +66,7 @@ def _get_zone_model() -> RFDETRMedium:
         )
     return _zone_model
 
-
+@log_duration_sync("cv.defects_model_predict")
 def _get_defects_model() -> RFDETRMedium:
     global _defects_model
     if _defects_model is None:

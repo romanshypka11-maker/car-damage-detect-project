@@ -8,6 +8,7 @@ from ai_agent.graph import ask
 from ai_agent.llm import generate_car_verdict, generate_sql_via_qwen
 from ai_agent.sql_guard import validate_sql
 from core.db import fetch_all
+from core.timing import get_request_id
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/ai", tags=["ai"])
@@ -62,7 +63,7 @@ async def get_car_verdict(request: VerdictRequest):
 async def run_agent(request: AgentRequest):
     try:
         result = await ask(request.text)
-        return {"status": "success", "result": result}
+        return {"status": "success", "result": result, "request_id": get_request_id()}
     except Exception:
         logger.exception("Agent execution failed")
         raise HTTPException(status_code=500, detail="Помилка виконання агента")

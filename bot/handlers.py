@@ -79,13 +79,15 @@ async def handle_auto_link(message: Message):
     )
     settings = get_settings()
     try:
-        async with httpx.AsyncClient(timeout=httpx.Timeout(120.0, connect=10.0)) as client:
+        async with httpx.AsyncClient(timeout=httpx.Timeout(240.0, connect=10.0)) as client:
             response = await client.post(
                 f"{settings.ai_service_url}/api/ai/agent",
                 json={"text": clean_url},
             )
             response.raise_for_status()
             state = response.json().get("result", {})
+            rid = response.json().get("request_id", "-")
+            logger.info("[%s] Bot received response in handle_auto_link", rid)
 
         car_data = state.get("car_data") or {}
 
@@ -183,6 +185,8 @@ async def handle_ai_text_query(message: Message):
             )
             response.raise_for_status()
             state = response.json().get("result", {})
+            rid = response.json().get("request_id", "-")
+            logger.info("[%s] Bot received response in handle_ai_text_query", rid)
 
         db_result = state.get("db_result")
         if db_result and isinstance(db_result, list) and len(db_result) > 0:

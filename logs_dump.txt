@@ -1,0 +1,575 @@
+﻿FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 16:40:17,088 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 16:45:55,390 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 16:45:55,599 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 16:45:55,914 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 16:45:55,914 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 16:46:08,966 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 16:46:08,969 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax Ðâ Google: []
+2026-08-14 16:46:08,970 - INFO - [Bidfax] ðÉð▓Ðéð¥ ðÀð░ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ÐçðÁÐÇðÁðÀ Google.
+2026-08-14 16:47:03,443 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:52684 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 16:50:09,035 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 16:50:29,404 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 16:51:10,833 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 16:51:11,205 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 16:51:11,988 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 16:51:11,988 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 16:51:32,759 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 16:51:32,761 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax Ðâ Google: []
+2026-08-14 16:51:32,761 - INFO - [Bidfax] ðÉð▓Ðéð¥ ðÀð░ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ÐçðÁÐÇðÁðÀ Google.
+2026-08-14 16:51:32,761 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 16:51:32,761 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 16:51:32,761 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 16:51:40,527 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 16:51:40,529 - INFO - [Aggregator] PLC.ua ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 16:51:40,529 - WARNING - [Aggregator] ðñð¥Ðéð¥ ð┤ð╗ÐÅ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ð¢ð░ ðÂð¥ð┤ð¢ð¥ð╝Ðâ ðÀ ð┤ðÂðÁÐÇðÁð╗.
+2026-08-14 16:52:21,252 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:58926 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 16:59:33,597 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 16:59:44,383 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 16:59:49,372 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 16:59:49,547 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 16:59:49,740 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 16:59:49,740 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 16:59:52,387 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 16:59:52,388 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 16:59:52,388 - INFO - <html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=WA1VAAF7XJD019981+bidfax&amp;sei=gkl_aoHUI_iOxc8P1NzJ2Qs</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');if(e){e.focus();} if(solveSimpleChallenge) {solveSimpleChallenge(0,0);}">
+<div style="max-width:400px;">
+<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
+<form id="captcha-form" action="index" method="post">
+<noscript>
+<div style="font-size:13px;">
+  In order to continue, please enable javascript on your web browser.
+</div>
+</noscript>
+<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-5gTdLl6IS0Y6zKiLKimmhaY3IOLosQFpvj9Tvt9s2RAiKLtLUEWOP5N8mtHLNUzF"></script><script src="https://www.google.com/recaptcha/enterprise.js" async="" defer=""></script>
+<script>var submitCallback
+2026-08-14 16:59:52,388 - INFO - -----------------------------------
+2026-08-14 16:59:52,389 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 16:59:52,389 - INFO -    1. #
+2026-08-14 16:59:52,389 - INFO -    2. //www.google.com/policies/terms/
+2026-08-14 16:59:52,389 - INFO -    3. //support.google.com/websearch/answer/86640
+2026-08-14 16:59:52,390 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax Ðâ Google: []
+2026-08-14 16:59:52,390 - INFO - [Bidfax] ðÉð▓Ðéð¥ ðÀð░ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ÐçðÁÐÇðÁðÀ Google.
+2026-08-14 16:59:52,390 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 16:59:52,391 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 16:59:52,391 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 16:59:54,743 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 16:59:54,743 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 16:59:54,743 - INFO - <html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=WA1VAAF7XJD019981&amp;sei=hUl_ap3NBfrhxc8PvMfk2Qk</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');if(e){e.focus();} if(solveSimpleChallenge) {solveSimpleChallenge(0,0);}">
+<div style="max-width:400px;">
+<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
+<form id="captcha-form" action="index" method="post">
+<noscript>
+<div style="font-size:13px;">
+  In order to continue, please enable javascript on your web browser.
+</div>
+</noscript>
+<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-5gTdLl6IS0Y6zKiLKimmhaY3IOLosQFpvj9Tvt9s2RAiKLtLUEWOP5N8mtHLNUzF"></script><script src="https://www.google.com/recaptcha/enterprise.js" async="" defer=""></script>
+<script>var submitCallback = func
+2026-08-14 16:59:54,743 - INFO - -----------------------------------
+2026-08-14 16:59:54,744 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 16:59:54,744 - INFO -    1. #
+2026-08-14 16:59:54,745 - INFO -    2. //www.google.com/policies/terms/
+2026-08-14 16:59:54,745 - INFO -    3. //support.google.com/websearch/answer/86640
+2026-08-14 16:59:54,745 - INFO - [Aggregator] PLC.ua ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 16:59:54,745 - WARNING - [Aggregator] ðñð¥Ðéð¥ ð┤ð╗ÐÅ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ð¢ð░ ðÂð¥ð┤ð¢ð¥ð╝Ðâ ðÀ ð┤ðÂðÁÐÇðÁð╗.
+2026-08-14 17:00:36,345 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:53386 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 17:02:44,642 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 17:02:55,637 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 17:03:01,075 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 17:03:01,283 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 17:03:01,467 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 17:03:01,468 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:03:04,585 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:03:04,585 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 17:03:04,586 - INFO - <html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=WA1VAAF7XJD019981+bidfax&amp;sei=Qkp_aveGDvKL7NYPnofekQw</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');if(e){e.focus();} if(solveSimpleChallenge) {solveSimpleChallenge(0,0);}">
+<div style="max-width:400px;">
+<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
+<form id="captcha-form" action="index" method="post">
+<noscript>
+<div style="font-size:13px;">
+  In order to continue, please enable javascript on your web browser.
+</div>
+</noscript>
+<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-5gTdLl6IS0Y6zKiLKimmhaY3IOLosQFpvj9Tvt9s2RAiKLtLUEWOP5N8mtHLNUzF"></script><script src="https://www.google.com/recaptcha/enterprise.js" async="" defer=""></script>
+<script>var submitCallback
+2026-08-14 17:03:04,586 - INFO - -----------------------------------
+2026-08-14 17:03:04,587 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:03:04,587 - INFO -    1. #
+2026-08-14 17:03:04,587 - INFO -    2. //www.google.com/policies/terms/
+2026-08-14 17:03:04,587 - INFO -    3. //support.google.com/websearch/answer/86640
+2026-08-14 17:03:04,588 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax Ðâ Google: []
+2026-08-14 17:03:04,588 - INFO - [Bidfax] ðÉð▓Ðéð¥ ðÀð░ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ÐçðÁÐÇðÁðÀ Google.
+2026-08-14 17:03:04,588 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:03:04,588 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 17:03:04,588 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:03:06,407 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:03:06,408 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 17:03:06,408 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 site:plc.ua at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.b7791eaa1c6d921ef675.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top">
+2026-08-14 17:03:06,408 - INFO - -----------------------------------
+2026-08-14 17:03:06,414 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:03:06,414 - INFO -    1. /html/
+2026-08-14 17:03:06,414 - INFO -    2. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:03:06,414 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:03:06,414 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:03:06,414 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:03:06,414 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:03:06,414 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:03:06,414 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:03:06,414 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:03:06,414 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:03:06,414 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:03:06,414 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:03:06,414 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:03:06,414 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fkorea%2Fmake%2Fnissan%2F&rut=4f17f588526aa8bc3aa43195351d99ef61d4d818643c4ae1d64c23a087667c37
+2026-08-14 17:03:06,414 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fkorea%2Fmake%2Fnissan%2F&rut=4f17f588526aa8bc3aa43195351d99ef61d4d818643c4ae1d64c23a087667c37
+2026-08-14 17:03:06,414 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fkorea%2Fmake%2Fnissan%2F&rut=4f17f588526aa8bc3aa43195351d99ef61d4d818643c4ae1d64c23a087667c37
+2026-08-14 17:03:06,414 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fkorea%2Fmake%2Fnissan%2F&rut=4f17f588526aa8bc3aa43195351d99ef61d4d818643c4ae1d64c23a087667c37
+2026-08-14 17:03:06,414 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Fjaguar%2Df%2Dpace%2D2018%2Dvin%2Dsadcm2fv7ja240081%2Dmh%2Dsadcm2fv7ja240081%2F&rut=9230f53710aae21b31362baca453f59e6bbfe1c4088eb8277add0d9f86b97049
+2026-08-14 17:03:06,414 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Fjaguar%2Df%2Dpace%2D2018%2Dvin%2Dsadcm2fv7ja240081%2Dmh%2Dsadcm2fv7ja240081%2F&rut=9230f53710aae21b31362baca453f59e6bbfe1c4088eb8277add0d9f86b97049
+2026-08-14 17:03:06,414 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Fjaguar%2Df%2Dpace%2D2018%2Dvin%2Dsadcm2fv7ja240081%2Dmh%2Dsadcm2fv7ja240081%2F&rut=9230f53710aae21b31362baca453f59e6bbfe1c4088eb8277add0d9f86b97049
+2026-08-14 17:03:06,415 - INFO - [Aggregator] PLC.ua ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:03:06,415 - WARNING - [Aggregator] ðñð¥Ðéð¥ ð┤ð╗ÐÅ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ð¢ð░ ðÂð¥ð┤ð¢ð¥ð╝Ðâ ðÀ ð┤ðÂðÁÐÇðÁð╗.
+2026-08-14 17:03:40,626 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:38858 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 17:04:07,883 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 17:04:18,750 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 17:04:25,773 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 17:04:25,970 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 17:04:26,089 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 17:04:26,089 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:04:28,430 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:04:28,431 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 17:04:28,431 - INFO - <html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=WA1VAAF7XJD019981+bidfax&amp;sei=lkp_arPwNKiOxc8P0tOP0AE</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');if(e){e.focus();} if(solveSimpleChallenge) {solveSimpleChallenge(0,0);}">
+<div style="max-width:400px;">
+<hr noshade="" size="1" style="color:#ccc; background-color:#ccc;"><br>
+<form id="captcha-form" action="index" method="post">
+<noscript>
+<div style="font-size:13px;">
+  In order to continue, please enable javascript on your web browser.
+</div>
+</noscript>
+<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/XOqlk8PL_yVx6IdpLbpXdiLy/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-5gTdLl6IS0Y6zKiLKimmhaY3IOLosQFpvj9Tvt9s2RAiKLtLUEWOP5N8mtHLNUzF"></script><script src="https://www.google.com/recaptcha/enterprise.js" async="" defer=""></script>
+<script>var submitCallback
+2026-08-14 17:04:28,431 - INFO - -----------------------------------
+2026-08-14 17:04:28,432 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:04:28,432 - INFO -    1. #
+2026-08-14 17:04:28,432 - INFO -    2. //www.google.com/policies/terms/
+2026-08-14 17:04:28,432 - INFO -    3. //support.google.com/websearch/answer/86640
+2026-08-14 17:04:28,433 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax Ðâ Google: []
+2026-08-14 17:04:28,433 - INFO - [Bidfax] ðÉð▓Ðéð¥ ðÀð░ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ÐçðÁÐÇðÁðÀ Google.
+2026-08-14 17:04:28,433 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:04:28,433 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 17:04:28,433 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:04:30,183 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:04:30,183 - INFO - --- [DEBUG] RAW HTML ðÆðåðö GOOGLE ---
+2026-08-14 17:04:30,184 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.b7791eaa1c6d921ef675.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-08-14 17:04:30,184 - INFO - -----------------------------------
+2026-08-14 17:04:30,190 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû Google (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:04:30,190 - INFO -    1. /html/
+2026-08-14 17:04:30,190 - INFO -    2. 
+2026-08-14 17:04:30,190 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:04:30,190 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:04:30,190 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:04:30,190 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:04:30,190 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:04:30,190 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:04:30,190 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:04:30,190 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:04:30,190 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:04:30,190 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:04:30,190 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:04:30,190 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:04:30,190 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:04:30,190 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:04:30,190 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:04:30,190 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:04:30,190 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fauto.ria.com%2Fuk%2Fauto_audi_q7_39890885.html&rut=486191c9c2800b024855e93e9feeacfc64a0a9996a1ca4d035caf3087cee5431
+2026-08-14 17:04:30,190 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fauto.ria.com%2Fuk%2Fauto_audi_q7_39890885.html&rut=486191c9c2800b024855e93e9feeacfc64a0a9996a1ca4d035caf3087cee5431
+2026-08-14 17:04:30,191 - INFO - [Aggregator] PLC.ua ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:04:30,191 - WARNING - [Aggregator] ðñð¥Ðéð¥ ð┤ð╗ÐÅ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ð¢ð░ ðÂð¥ð┤ð¢ð¥ð╝Ðâ ðÀ ð┤ðÂðÁÐÇðÁð╗.
+2026-08-14 17:05:07,131 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:44322 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 17:14:44,027 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 17:14:54,580 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 17:15:05,040 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 17:15:05,248 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 17:15:05,363 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 17:15:05,363 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ DuckDuckGo...
+2026-08-14 17:15:07,305 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:15:07,305 - INFO - --- [DEBUG] RAW HTML ðÆðåðö ðƒð×ð¿ðúðÜð×ðÆðÿðÜðÉ ---
+2026-08-14 17:15:07,306 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 site:bidfax.info at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.b7791eaa1c6d921ef675.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="
+2026-08-14 17:15:07,306 - INFO - -----------------------------------
+2026-08-14 17:15:07,309 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:15:07,309 - INFO -    1. /html/
+2026-08-14 17:15:07,309 - INFO -    2. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2F&rut=08a096ee8776711c2ccc3e6c4d78fdb4dff409b73ef87ee48b58fd7982586cc6
+2026-08-14 17:15:07,309 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2F&rut=08a096ee8776711c2ccc3e6c4d78fdb4dff409b73ef87ee48b58fd7982586cc6
+2026-08-14 17:15:07,309 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2F&rut=08a096ee8776711c2ccc3e6c4d78fdb4dff409b73ef87ee48b58fd7982586cc6
+2026-08-14 17:15:07,309 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2F&rut=08a096ee8776711c2ccc3e6c4d78fdb4dff409b73ef87ee48b58fd7982586cc6
+2026-08-14 17:15:07,309 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fen.bidfax.info%2F&rut=93bb1cb2620e82643269d98d085e6937fdfbd27dd13a3ad497f7f10e2ff7c2f7
+2026-08-14 17:15:07,309 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fen.bidfax.info%2F&rut=93bb1cb2620e82643269d98d085e6937fdfbd27dd13a3ad497f7f10e2ff7c2f7
+2026-08-14 17:15:07,309 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fen.bidfax.info%2F&rut=93bb1cb2620e82643269d98d085e6937fdfbd27dd13a3ad497f7f10e2ff7c2f7
+2026-08-14 17:15:07,309 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fen.bidfax.info%2F&rut=93bb1cb2620e82643269d98d085e6937fdfbd27dd13a3ad497f7f10e2ff7c2f7
+2026-08-14 17:15:07,309 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2Flexus%2Frx%2F1104052%2Dlexus%2Drx%2D350%2D2016%2Dblue%2D35l%2D6%2Dvin%2D2t2bzmca2gc045947.html&rut=5179d9787a8182db8305bf4a72fc11bff10d20164bcf51700864bb3e169fed46
+2026-08-14 17:15:07,309 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2Flexus%2Frx%2F1104052%2Dlexus%2Drx%2D350%2D2016%2Dblue%2D35l%2D6%2Dvin%2D2t2bzmca2gc045947.html&rut=5179d9787a8182db8305bf4a72fc11bff10d20164bcf51700864bb3e169fed46
+2026-08-14 17:15:07,309 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2Flexus%2Frx%2F1104052%2Dlexus%2Drx%2D350%2D2016%2Dblue%2D35l%2D6%2Dvin%2D2t2bzmca2gc045947.html&rut=5179d9787a8182db8305bf4a72fc11bff10d20164bcf51700864bb3e169fed46
+2026-08-14 17:15:07,309 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fbidfax.info%2Flexus%2Frx%2F1104052%2Dlexus%2Drx%2D350%2D2016%2Dblue%2D35l%2D6%2Dvin%2D2t2bzmca2gc045947.html&rut=5179d9787a8182db8305bf4a72fc11bff10d20164bcf51700864bb3e169fed46
+2026-08-14 17:15:07,309 - INFO -    14. //duckduckgo.com/feedback.html
+2026-08-14 17:15:07,310 - INFO - --- [DEBUG] ðùðØðÉðÖðöðòðØð× ðºðÿðíðóðÿðÖ ðøðåðØðÜ BIDFAX: https://en.bidfax.info/ ---
+2026-08-14 17:15:07,310 - INFO - [Bidfax] ðùð¢ð░ð╣ð┤ðÁð¢ð¥ ð╗ð¥Ðé: https://en.bidfax.info/. ðùð░ð▓ð░ð¢Ðéð░ðÂÐâÐÄ ÐüÐéð¥ÐÇÐûð¢ð║Ðâ...
+2026-08-14 17:15:19,251 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:15:19,269 - INFO - [Bidfax] ðúÐüð┐ÐûÐêð¢ð¥ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ 0 Ðäð¥Ðéð¥.
+2026-08-14 17:15:19,269 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:15:19,269 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 17:15:19,269 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:15:21,071 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:15:21,079 - INFO - --- [DEBUG] ðùðØðÉðÖðöðòðØð× ðºðÿðíðóðÿðÖ ðøðåðØðÜ: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-08-14 17:15:51,749 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:15:51,814 - INFO - [Aggregator] ðúÐüð┐ÐûÐêð¢ð¥! ðùð¢ð░ð╣ð┤ðÁð¢ð¥ 14 Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 1: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/3f34b70908564f358dc0c676bdf038a2_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 2: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/ad1007c288454062a20611843c603136_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 3: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/82c49871399d494f8e265df34e3d949c_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 4: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/ac47af23b99948f0a365bf743598cf8c_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 5: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/aed4398e9592486eaaf2dc12d37cb0e0_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 6: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/3aa9de4676614a92a81771ea843fb86a_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 7: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/c7777883f4fa42e4a91390a96641fef3_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 8: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/b4ccf38489244ca6871f55d99afeef21_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 9: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/5250760bdff5449ca93badd56d8a73ea_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 10: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/32f4172eafcb45f1a690d5ca97e14693_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 11: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/fdf8527ada4f45be9ee3a02f31204ca6_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 12: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/f88beaab2b594b268a35183ef3765569_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 13: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/1c66e3f9fc794c2ea5b4792d595862fa_hrs.jpg
+2026-08-14 17:15:51,814 - INFO -     ­ƒöù ðñð¥Ðéð¥ 14: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/634dcbe5975849c980debe6de1b03f0d_hrs.jpg
+2026-08-14 17:15:51,815 - INFO - Loading zone detection model from /app/models_ML/detect_damage_zone_final.pth
+[2026-08-14 17:15:51] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:15:51] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:15:53] [WARNING] rf-detr - Checkpoint has 3 classes but model is configured for 90. Using checkpoint class count (3). Pass num_classes=3 to suppress this warning.
+[2026-08-14 17:15:53] [WARNING] rf-detr - load_pretrain_weights: args.num_queries absent; inferred ckpt_num_queries=300 from tensor rows 3900 ├À ckpt_group_detr=13.
+2026-08-14 17:15:53,630 - INFO - Loading defect detection model from /app/models_ML/rf_detr_car_damage_final_auction_damage.pth
+[2026-08-14 17:15:53] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:15:53] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:15:55] [WARNING] rf-detr - Checkpoint has 29 classes but model is configured for 90. Using checkpoint class count (29). Pass num_classes=29 to suppress this warning.
+[2026-08-14 17:15:55] [WARNING] rf-detr - load_pretrain_weights: args.num_queries absent; inferred ckpt_num_queries=300 from tensor rows 3900 ├À ckpt_group_detr=13.
+[2026-08-14 17:15:55] [WARNING] rf-detr - Model is not optimized for inference. Latency may be higher than expected. For full GPU throughput (e.g. ~8x on T4 via FP16 Tensor Cores), call model.optimize_for_inference(dtype=torch.float16).
+[2026-08-14 17:15:57] [WARNING] rf-detr - Model is not optimized for inference. Latency may be higher than expected. For full GPU throughput (e.g. ~8x on T4 via FP16 Tensor Cores), call model.optimize_for_inference(dtype=torch.float16).
+2026-08-14 17:16:48,853 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:59036 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 17:17:56,374 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-08-14 17:18:04,115 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-08-14 17:18:14,037 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-08-14 17:18:14,181 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-08-14 17:18:14,364 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-08-14 17:18:14,365 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ DuckDuckGo...
+2026-08-14 17:18:16,271 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:18:16,271 - INFO - --- [DEBUG] RAW HTML ðÆðåðö ðƒð×ð¿ðúðÜð×ðÆðÿðÜðÉ ---
+2026-08-14 17:18:16,271 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.b7791eaa1c6d921ef675.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-08-14 17:18:16,271 - INFO - -----------------------------------
+2026-08-14 17:18:16,277 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû (ð┐ðÁÐÇÐêÐû 20):
+2026-08-14 17:18:16,277 - INFO -    1. /html/
+2026-08-14 17:18:16,277 - INFO -    2. 
+2026-08-14 17:18:16,277 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:18:16,277 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:18:16,277 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:18:16,277 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=df5a325a7a43e5f6195838d0e0272509b50b5f11b71af3ca5eff0e569447c812
+2026-08-14 17:18:16,277 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:18:16,277 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:18:16,277 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:18:16,277 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=7f7ababb4fd4807028b6ce745e8ad4c39ae3db64c30da842ff0cec095a28802d
+2026-08-14 17:18:16,277 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:18:16,277 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:18:16,277 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:18:16,277 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=1ebe0c24e58af7534651b5fd8609a035a2a06224b88120c1261db524ad723b60
+2026-08-14 17:18:16,277 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:18:16,277 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:18:16,277 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:18:16,277 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Famericamotors.com%2Fen%2Faudi%2Fq7%2FWA1VAAF7XJD019981&rut=2014db1140ddc549bed5e3f68373702bd300e0dae52b15967b5ae6cbf7edc7b3
+2026-08-14 17:18:16,277 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:18:16,278 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=8a90a591dd84298f60dd40b6d7ae3c5691793ff3c2ee4f022bca8034bec86325
+2026-08-14 17:18:16,278 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax: []
+2026-08-14 17:18:16,278 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-08-14 17:18:16,278 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-08-14 17:18:16,278 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-08-14 17:18:18,001 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:18:18,007 - INFO - --- [DEBUG] ðùðØðÉðÖðöðòðØð× ðºðÿðíðóðÿðÖ ðøðåðØðÜ: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-08-14 17:18:35,497 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-08-14 17:18:35,581 - INFO - [Aggregator] ðúÐüð┐ÐûÐêð¢ð¥! ðùð¢ð░ð╣ð┤ðÁð¢ð¥ 14 Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua
+2026-08-14 17:18:35,581 - INFO -     ­ƒöù ðñð¥Ðéð¥ 1: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/3aa9de4676614a92a81771ea843fb86a_hrs.jpg
+2026-08-14 17:18:35,581 - INFO -     ­ƒöù ðñð¥Ðéð¥ 2: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/fdf8527ada4f45be9ee3a02f31204ca6_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 3: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/ad1007c288454062a20611843c603136_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 4: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/c7777883f4fa42e4a91390a96641fef3_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 5: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/ac47af23b99948f0a365bf743598cf8c_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 6: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/634dcbe5975849c980debe6de1b03f0d_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 7: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/3f34b70908564f358dc0c676bdf038a2_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 8: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/1c66e3f9fc794c2ea5b4792d595862fa_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 9: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/82c49871399d494f8e265df34e3d949c_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 10: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/5250760bdff5449ca93badd56d8a73ea_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 11: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/f88beaab2b594b268a35183ef3765569_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 12: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/aed4398e9592486eaaf2dc12d37cb0e0_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 13: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/b4ccf38489244ca6871f55d99afeef21_hrs.jpg
+2026-08-14 17:18:35,582 - INFO -     ­ƒöù ðñð¥Ðéð¥ 14: https://img.plc.ua/full/img3/01/2018/24/2768/516dc774c1a5cedc82d4280d22489dcc/32f4172eafcb45f1a690d5ca97e14693_hrs.jpg
+2026-08-14 17:18:35,583 - INFO - Loading zone detection model from /app/models_ML/detect_damage_zone_final.pth
+[2026-08-14 17:18:35] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:18:35] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:18:37] [WARNING] rf-detr - Checkpoint has 3 classes but model is configured for 90. Using checkpoint class count (3). Pass num_classes=3 to suppress this warning.
+[2026-08-14 17:18:37] [WARNING] rf-detr - load_pretrain_weights: args.num_queries absent; inferred ckpt_num_queries=300 from tensor rows 3900 ├À ckpt_group_detr=13.
+2026-08-14 17:18:37,338 - INFO - Loading defect detection model from /app/models_ML/rf_detr_car_damage_final_auction_damage.pth
+[2026-08-14 17:18:37] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:18:37] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-08-14 17:18:38] [WARNING] rf-detr - Checkpoint has 29 classes but model is configured for 90. Using checkpoint class count (29). Pass num_classes=29 to suppress this warning.
+[2026-08-14 17:18:38] [WARNING] rf-detr - load_pretrain_weights: args.num_queries absent; inferred ckpt_num_queries=300 from tensor rows 3900 ├À ckpt_group_detr=13.
+[2026-08-14 17:18:39] [WARNING] rf-detr - Model is not optimized for inference. Latency may be higher than expected. For full GPU throughput (e.g. ~8x on T4 via FP16 Tensor Cores), call model.optimize_for_inference(dtype=torch.float16).
+[2026-08-14 17:18:40] [WARNING] rf-detr - Model is not optimized for inference. Latency may be higher than expected. For full GPU throughput (e.g. ~8x on T4 via FP16 Tensor Cores), call model.optimize_for_inference(dtype=torch.float16).
+2026-08-14 17:19:23,658 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [1], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': ['ðƒð¥ðÀð░Ðêð╗ÐÅÐàð¥ð▓ð©ð║ / ðÜÐÇð¥Ðüð¥ð▓ðÁÐÇ'], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': ['ðÉð▓Ðéð¥ð╝ð░Ðé'], 'color': ['ðæÐûð╗ð©ð╣'], 'description': ['ðƒÐÇð¥ð┤ð░ÐöÐéÐîÐüÐÅ Audi Q7 3.0 TFSI Quattro, 2017 ÐÇÐûð║. ðÉð▓Ðéð¥ð╝ð¥ð▒Ðûð╗Ðî Ðâ ð┤ÐâðÂðÁ Ðàð¥ÐÇð¥Ðêð¥ð╝Ðâ ÐüÐéð░ð¢Ðû, ð┐ð¥ð▓ð¢ÐûÐüÐéÐÄ ð¥ð▒Ðüð╗ÐâðÂðÁð¢ð©ð╣ Ðéð░ ð¢ðÁ ð┐ð¥ÐéÐÇðÁð▒ÐâÐö ð▓ð║ð╗ð░ð┤ðÁð¢Ðî. ðùð░ð╝Ðûð¢ðÁð¢ð¥ ðôðáð£, ð▓ÐüÐû ÐÇð¥ð╗ð©ð║ð© Ðéð░ ð¢ð░ÐéÐÅð│Ðâð▓ð░ÐçÐû , ð╝ð░Ðüð╗ð░ Ðéð░ ð┐ÐÇð¥ð▓ðÁð┤ðÁð¢Ðû ð▓ÐüÐû ÐÇðÁð│ð╗ð░ð╝ðÁð¢Ðéð¢Ðû ÐÇð¥ð▒ð¥Ðéð© ð┤ð╗ÐÅ ð┤ð░ð¢ð¥ð│ð¥ ð┐ÐÇð¥ð▒Ðûð│Ðâ. ðƒð¥ÐéÐâðÂð¢ð©ð╣ Ðéð░ ð¢ð░ð┤Ðûð╣ð¢ð©ð╣ ð▒ðÁð¢ðÀð©ð¢ð¥ð▓ð©ð╣ ð┤ð▓ð©ð│Ðâð¢ 3.0, ð░ð▓Ðéð¥ð╝ð░Ðéð©Ðçð¢ð░ ð║ð¥ÐÇð¥ð▒ð║ð░ ð┐ðÁÐÇðÁð┤ð░Ðç']}
+- ---------------------------------
+INFO:     172.19.0.4:44568 - "POST /api/ai/agent HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-08-14 17:21:07,560 - INFO - Closing asyncpg connection pool...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+FutureWarning: target=True is deprecated since `v0.8`; use `TargetMode.ARGS_REMAP` instead. Will be removed in `v1.0`.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-09-02 10:11:50,776 - INFO - Initializing asyncpg connection pool...
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-09-02 10:12:27,049 - INFO - [9cd88a41] New request: https://auto.ria.com/uk/auto_audi_q7_39890885.html
+2026-09-02 10:12:27,926 - INFO - HTTP Request: GET https://auto.ria.com/uk/auto_audi_q7_39890885.html "HTTP/1.1 200 OK"
+2026-09-02 10:12:28,099 - INFO - [9cd88a41] scrape_car_node took 1018ms
+2026-09-02 10:12:28,123 - INFO - Loading CatBoost price model from /app/models_ML/current_model_for_car_predict_price_cat_boost
+2026-09-02 10:12:28,305 - INFO - [9cd88a41] predict_price_node took 204ms
+2026-09-02 10:12:28,307 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ Bidfax...
+2026-09-02 10:12:28,307 - INFO - [Bidfax] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ DuckDuckGo...
+2026-09-02 10:12:30,176 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:30,177 - INFO - --- [DEBUG] RAW HTML ðÆðåðö ðƒð×ð¿ðúðÜð×ðÆðÿðÜðÉ ---
+2026-09-02 10:12:30,178 - INFO - <html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+  <meta name="referrer" content="origin">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WA1VAAF7XJD019981 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml">
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon">
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon">
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2">
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2">
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2">
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2">
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.7bcf94631b5964fa5ad7.css" type="text/css">
+</head>
+
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <for
+2026-09-02 10:12:30,178 - INFO - -----------------------------------
+2026-09-02 10:12:30,185 - INFO - [DEBUG] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû href Ðâ ð▓ð©ð┤ð░ÐçÐû (ð┐ðÁÐÇÐêÐû 20):
+2026-09-02 10:12:30,185 - INFO -    1. /html/
+2026-09-02 10:12:30,185 - INFO -    2. 
+2026-09-02 10:12:30,186 - INFO -    3. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,186 - INFO -    4. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,186 - INFO -    5. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,187 - INFO -    6. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.automobileauctioneers.com%2Fvehicles%2Dhistory%2Faudi%2Fq7%2F2018%2Fwa1vaaf7xjd019981%2F&rut=79f0d436bb903c9b4eaffcc46b2be0b3d29e8c5cf91bfb13c0904275b03e312d
+2026-09-02 10:12:30,187 - INFO -    7. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,187 - INFO -    8. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,187 - INFO -    9. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,188 - INFO -    10. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fen%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=a8c70c1415dad3f2b5b61a378aacc760a112da0a6554a27ccfb63b22bf6a57a2
+2026-09-02 10:12:30,188 - INFO -    11. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    12. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    13. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,188 - INFO -    14. //duckduckgo.com/l/?uddg=https%3A%2F%2Fplc.ua%2Fauctions%2Flot%2Faudi%2Dq7%2D2018%2Dvin%2Dwa1vaaf7xjd019981%2D1%2D54089803%2F&rut=24027711a97ec58e362a7cc0b672849cd0eb68dab26c16841b1182d3d3734771
+2026-09-02 10:12:30,189 - INFO -    15. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,189 - INFO -    16. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,189 - INFO -    17. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,190 - INFO -    18. //duckduckgo.com/l/?uddg=https%3A%2F%2Fcarjudge.com%2Fen%2Fusa&rut=c5418c7bc41cea04bdd0fa343fd781e329f2419094972664830976527826cd3a
+2026-09-02 10:12:30,190 - INFO -    19. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.e%2Draft.com%2Fregions%2FWA1VAAF7XJD009239&rut=8b78f1df7a37eaf3e617c45ff633590e399845bcb4406fb464e8408b439cfc81
+2026-09-02 10:12:30,190 - INFO -    20. //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.e%2Draft.com%2Fregions%2FWA1VAAF7XJD009239&rut=8b78f1df7a37eaf3e617c45ff633590e399845bcb4406fb464e8408b439cfc81
+2026-09-02 10:12:30,191 - INFO - [Bidfax] ðúÐüÐû ðÀð¢ð░ð╣ð┤ðÁð¢Ðû ð╗Ðûð¢ð║ð© Bidfax: []
+2026-09-02 10:12:30,192 - INFO - [9cd88a41] photo_source.Bidfax took 1885ms
+2026-09-02 10:12:30,192 - INFO - [Aggregator] Bidfax ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-09-02 10:12:30,192 - INFO - [Aggregator] ðíð┐ÐÇð¥ð▒ð░ ð¥ÐéÐÇð©ð╝ð░Ðéð© Ðäð¥Ðéð¥ ÐçðÁÐÇðÁðÀ PLC.ua...
+2026-09-02 10:12:30,193 - INFO - [PLC.ua] ð¿Ðâð║ð░ÐÄ VIN WA1VAAF7XJD019981 ÐçðÁÐÇðÁðÀ Google...
+2026-09-02 10:12:32,042 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:32,049 - INFO - --- [DEBUG] ðùðØðÉðÖðöðòðØð× ðºðÿðíðóðÿðÖ ðøðåðØðÜ: https://plc.ua/en/auctions/lot/audi-q7-2018-vin-wa1vaaf7xjd019981-1-54089803/ ---
+2026-09-02 10:12:39,647 - INFO - HTTP Request: POST http://flaresolverr:8191/v1 "HTTP/1.1 200 OK"
+2026-09-02 10:12:39,654 - INFO - [9cd88a41] photo_source.PLC.ua took 9461ms
+2026-09-02 10:12:39,655 - INFO - [Aggregator] PLC.ua ð¢ÐûÐçð¥ð│ð¥ ð¢ðÁ ðÀð¢ð░ð╣Ðêð¥ð▓.
+2026-09-02 10:12:39,655 - WARNING - [Aggregator] ðñð¥Ðéð¥ ð┤ð╗ÐÅ VIN WA1VAAF7XJD019981 ð¢ðÁ ðÀð¢ð░ð╣ð┤ðÁð¢ð¥ ð¢ð░ ðÂð¥ð┤ð¢ð¥ð╝Ðâ ðÀ ð┤ðÂðÁÐÇðÁð╗.
+2026-09-02 10:12:39,656 - INFO - [9cd88a41] photo_aggregator.total took 11349ms
+2026-09-02 10:12:39,656 - INFO - [9cd88a41] fetch_photos_node took 11350ms
+2026-09-02 10:12:39,664 - INFO - [9cd88a41] analyze_damage_node took 0ms
+2026-09-02 10:13:44,884 - INFO - HTTP Request: POST http://host.docker.internal:11434/api/generate "HTTP/1.1 200 OK"
+2026-09-02 10:13:44,887 - INFO - [9cd88a41] llm.generate_car_verdict took 65224ms
+2026-09-02 10:13:44,887 - INFO - [9cd88a41] generate_verdict_node took 65225ms
+2026-09-02 10:13:44,891 - INFO - [9cd88a41] TOTAL graph.ainvoke took 77822ms
+--- RAW FEATURES FOR CATBOOST ---
+{'make': ['Audi'], 'model': ['Q7'], 'year': [2017], 'mileage_km': [172000], 'engine_volume_l': [3.0], 'horsepower': [0], 'battery_capacity_kwh': [0.0], 'ev_range_km': [0], 'is_suv': [0], 'is_imported': [1], 'is_electric': [0], 'has_accident': [0], 'accident_details': [''], 'body_type': [''], 'fuel_type': ['ðæðÁð¢ðÀð©ð¢'], 'transmission': [''], 'color': [''], 'description': ['']}
+- ---------------------------------
+INFO:     172.19.0.4:33476 - "POST /api/ai/agent HTTP/1.1" 200 OK

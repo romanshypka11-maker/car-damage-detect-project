@@ -22,6 +22,7 @@ services:
     volumes:
       - .:/app
       - ./models_ML:/app/models_ML
+      - ./logs:/app/logs
     ports:
       - "8000:8000"
     extra_hosts:

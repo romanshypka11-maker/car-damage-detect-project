@@ -3,10 +3,10 @@ import logging
 import httpx
 
 from core.config import get_settings
-
+from core.timing import log_duration_async
 logger = logging.getLogger(__name__)
 
-
+@log_duration_async("llm.generate_car_verdict")
 async def generate_car_verdict(
     car_data: dict,
     cv_reports: list[str],
@@ -66,7 +66,7 @@ async def generate_car_verdict(
         logger.exception("Error in generate_car_verdict")
         return "❌ Помилка підключення до ШІ-моделі для аналізу вердикту."
 
-
+@log_duration_async("llm.generate_sql_via_qwen")
 async def generate_sql_via_qwen(user_text: str) -> str:
     settings = get_settings()
     table_name = settings.db_table
